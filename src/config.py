@@ -60,9 +60,14 @@ CHUNKS_CACHE_PATH     = RESULTS_DIR / "chunks.json"
 # language model
 # -----------------------------------------------------------------
 
-# flan-t5-base: ~250mb, runs on cpu, no api key needed.
-LM_MODEL_NAME     = "google/flan-t5-base"
-LM_MAX_NEW_TOKENS = 300
+# qwen2.5:1.5b: a 1.5b parameter slm served by ollama.
+# runs fully local on cpu, no api key, no internet at inference time.
+# we picked this over flan-t5-base because qwen is newer (2024),
+# instruction-tuned for chat, and produces longer grounded answers
+# from a rag prompt. small enough to fit the slm framing in the spec.
+LM_MODEL_NAME     = "qwen2.5:1.5b"
+LM_MAX_NEW_TOKENS = 400
+LM_TEMPERATURE    = 0.3  # low temperature for more grounded, less random answers
 
 # -----------------------------------------------------------------
 # chunking strategy

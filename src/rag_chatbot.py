@@ -50,59 +50,60 @@ Chunk = Dict[str, Any]
 # language model setup
 # -----------------------------------------------------------------
 
-def load_language_model():
+def check_language_model() -> None:
     """
-    load the flan-t5-base model and its tokenizer from huggingface.
-    on first run the model is downloaded (~250mb) and cached locally.
-    after the first run it loads from the local cache in a few seconds.
+    check that ollama is running and the chosen model is available.
+    unlike flan-t5, ollama runs as a background service, so we don't
+    'load' the model into python - we just confirm we can reach it.
     """
     try:
-        from transformers import T5ForConditionalGeneration, T5Tokenizer
+        import ollama
     except ImportError as error:
         raise ImportError(
-            "transformers is not installed. "
-            "install with: pip install transformers"
+            "ollama python client is not installed. "
+            "install with: pip3 install ollama"
         ) from error
 
-    print(f"loading language model: {LM_MODEL_NAME}")
-    print("(first run downloads ~250mb, then loads from cache)")
+    print(f"checking language model: {LM_MODEL_NAME}")
 
-    tokenizer = T5Tokenizer.from_pretrained(LM_MODEL_NAME)
-    model     = T5ForConditionalGeneration.from_pretrained(LM_MODEL_NAME)
-    model.eval()   # set to evaluation mode so we do not accidentally update weights
+    try:
+        # send a tiny test message to confirm ollama is reachable
+        ollama.chat(
+            model=LM_MODEL_NAME,
+            messages=[{"role": "user", "content": "hi"}],
+            options={"num_predict": 5},
+        )
+    except Exception as error:
+        raise RuntimeError(
+            f"could not reach ollama or load model {LM_MODEL_NAME}. "
+            f"make sure the ollama app is running and you have pulled "
+            f"the model with: ollama pull {LM_MODEL_NAME}.\n"
+            f"original error: {error}"
+        ) from error
 
-    print("language model loaded.\n")
-    return tokenizer, model
+    print("language model is ready.\n")
 
 
-def generate_answer(prompt: str, tokenizer, model) -> str:
+def generate_answer(prompt: str) -> str:
     """
-    send the prompt to flan-t5-base and return the generated answer.
-    the model reads the prompt and produces a response conditioned on it.
+    send the prompt to qwen2.5:1.5b via ollama and return the answer.
+    we use a low temperature so the model sticks closer to the
+    retrieved context and is less likely to invent details.
     """
-    import torch
+    import ollama
+    from config import LM_TEMPERATURE
 
-    # tokenize the prompt (convert text to token ids the model understands)
-    # truncation=True cuts very long prompts to fit the model's input limit
-    inputs = tokenizer(
-        prompt,
-        return_tensors="pt",
-        truncation=True,
-        max_length=1024
+    response = ollama.chat(
+        model=LM_MODEL_NAME,
+        messages=[{"role": "user", "content": prompt}],
+        options={
+            "num_predict": LM_MAX_NEW_TOKENS,
+            "temperature": LM_TEMPERATURE,
+        },
     )
 
-    # generate a response with no gradient tracking (faster, less memory)
-    with torch.no_grad():
-        output_ids = model.generate(
-            inputs["input_ids"],
-            max_new_tokens=LM_MAX_NEW_TOKENS,
-            num_beams=2,          # beam search for slightly better quality
-            early_stopping=True
-        )
-
-    # decode the output token ids back to a human-readable string
-    answer = tokenizer.decode(output_ids[0], skip_special_tokens=True)
-    return answer.strip()
+    answer = response["message"]["content"].strip()
+    return answer
 
 
 # -----------------------------------------------------------------
@@ -212,7 +213,7 @@ def setup_retriever() -> EmbeddingRetriever:
 # main chatbot loop
 # -----------------------------------------------------------------
 
-def run_chatbot(retriever: EmbeddingRetriever, tokenizer, model) -> None:
+def run_chatbot(retriever: EmbeddingRetriever) -> None:
     """
     the interactive question-answering loop.
     the user types a question and sees both the retrieved evidence
@@ -256,7 +257,7 @@ def run_chatbot(retriever: EmbeddingRetriever, tokenizer, model) -> None:
 
         # step 3: generate an answer from the language model
         print("\ngenerating answer...\n")
-        answer = generate_answer(prompt, tokenizer, model)
+        answer = generate_answer(prompt)
 
         # --- display the retrieved evidence ---
         print("-" * 60)
@@ -283,11 +284,11 @@ def run_chatbot(retriever: EmbeddingRetriever, tokenizer, model) -> None:
 
 def main() -> None:
     """
-    set up the retriever and language model then start the chatbot.
+    set up the retriever, check the language model, then start the chatbot.
     """
-    retriever            = setup_retriever()
-    tokenizer, lm_model  = load_language_model()
-    run_chatbot(retriever, tokenizer, lm_model)
+    retriever = setup_retriever()
+    check_language_model()
+    run_chatbot(retriever)
 
 
 if __name__ == "__main__":
