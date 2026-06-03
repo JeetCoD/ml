@@ -1,0 +1,747 @@
+question_id,source,question_type,play,question,expected_focus,system,retrieved_passages,generated_response,correctness_score,grounding_score,retrieval_relevance_score,usefulness_score,style_quality_score,comments
+IQ1,instructor,contextual_qa,Macbeth,Why does Macbeth kill Duncan?,"Macbeth's ambition, the witches' prophecy, Duncan as an obstacle to the crown, and Lady Macbeth's pressure.",baseline,N/A - baseline uses no retrieval,"Macbeth kills Duncan because he believes that doing so will make him a king and secure his position in Scotland. He sees it as the only way to fulfill his ambition of becoming a great warrior-king. Macbeth is driven by his desire for power and recognition, which has been fueled by the witches' prophecies about his future greatness. His belief in these supernatural predictions leads him to act on them, even though he knows that killing Duncan would be against his moral principles.",,,,,,
+IQ1,instructor,contextual_qa,Macbeth,Why does Macbeth kill Duncan?,"Macbeth's ambition, the witches' prophecy, Duncan as an obstacle to the crown, and Lady Macbeth's pressure.",rag,"Rank 1 | cosine similarity=0.7210
+[Macbeth, Act 2, Scene 2]
+[summary: Macbeth murders Duncan, and the couple reacts to guilt and fear.]
+[keywords: Duncan, murder, blood]
+[stage direction: Enter Lady Macbeth.]
+LADY MACBETH: That which hath made them drunk hath made me bold; What hath quench'd them hath given me fire. Hark! Peace! It was the owl that shriek'd, the fatal bellman, Which gives the stern'st good night. He is about it: The doors are open, and the surfeited grooms Do mock their charge with snores. I have drugg'd their possets That death and natu...
+
+---
+
+Rank 2 | cosine similarity=0.7096
+[Macbeth, Act 3, Scene 6]
+[summary: Scottish nobles discuss Macbeth’s tyranny and hope for resistance.]
+[keywords: tyranny, resistance]
+FORRES: The palace.
+[stage direction: Enter Lennox and another Lord.]
+LENNOX: My former speeches have but hit your thoughts, Which can interpret farther; only I say Thing's have been strangely borne. The gracious Duncan Was pitied of Macbeth; marry, he was dead. And the right valiant Banquo walk'd too late, Whom, you may say, if't please you, Fleance kill'd, For Fleance fled. Men must no...
+
+---
+
+Rank 3 | cosine similarity=0.7089
+[Macbeth, Act 1, Scene 4]
+[summary: Duncan names Malcolm heir, creating an obstacle to Macbeth’s ambition.]
+[keywords: Malcolm, succession, ambition]
+FORRES: The palace.
+FLOURISH: Enter Duncan, Malcolm, Donalbain, Lennox, and Attendants.
+DUNCAN: Is execution done on Cawdor? Are not Those in commission yet return'd?
+MALCOLM: My liege, They are not yet come back. But I have spoke With one that saw him die, who did report That very frankly he confess'd his treasons, Implored your Highness' pardon, and set forth A deep repen...
+
+---
+
+Rank 4 | cosine similarity=0.6517
+[Macbeth, Act 1, Scene 6]
+[summary: Duncan arrives at Macbeth’s castle, unaware of the planned betrayal.]
+[keywords: Duncan, castle, irony]
+[stage direction: Enter Duncan, Malcolm, Donalbain, Banquo, Lennox, Macduff, Ross,]
+[stage direction: Angus,]
+[stage direction: and Attendants.]
+DUNCAN: This castle hath a pleasant seat; the air Nimbly and sweetly recommends itself Unto our gentle senses.
+BANQUO: This guest of summer, The temple-haunting martlet, does approve By his loved mansionry that the heaven's breath Smells woo...
+
+---
+
+Rank 5 | cosine similarity=0.6443
+[Macbeth, Act 2, Scene 1]
+[summary: Macbeth sees a visionary dagger and moves toward Duncan’s chamber.]
+[keywords: dagger, vision, guilt]
+INVERNESS: Court of Macbeth's castle.
+[stage direction: Enter Banquo and Fleance, bearing a torch before him.]
+BANQUO: How goes the night, boy?
+FLEANCE: The moon is down; I have not heard the clock.
+BANQUO: And she goes down at twelve.
+FLEANCE: I take't 'tis later, sir.
+BANQUO: Hold, take my sword. There's husbandry in heaven, Their candles are all out. Take thee that too. A heavy summ...","Macbeth kills Duncan because he is driven by a deep-seated ambition and the desire for power. Despite his initial reluctance to murder Duncan, which Lady Macbeth initially encourages him to consider, Macbeth's sense of duty and loyalty to Banquo become overshadowed by his overwhelming need for recognition and respect within the Scottish nobility. The guilt that follows from committing such an act is a significant motivator as well, further fueling his actions.",,,,,,
+IQ2,instructor,concept_explanation,Hamlet,Who is Hamlet?,"Hamlet is the Prince of Denmark, son of the murdered King Hamlet, and the central figure in the revenge plot against Claudius.",baseline,N/A - baseline uses no retrieval,"Hamlet is Prince of Denmark and the main character in Shakespeare's play ""Hamlet."" He is a young man who has lost his father and uncle, leading him to question the morality of his family's actions. His motivation comes from deep sorrow over his father's death and his mother's hasty remarriage to his uncle Claudius, who took the throne by trickery after killing Hamlet's father King Hamlet. This betrayal causes Hamlet to be suspicious of Claudius and to harbor a secret love for Ophelia. He is also plagued with guilt about his own father's death and the murder he believes was committed by Claudius. His actions throughout the play are driven by these complex emotions and moral dilemmas, making him one of Shakespeare's most compelling characters.",,,,,,
+IQ2,instructor,concept_explanation,Hamlet,Who is Hamlet?,"Hamlet is the Prince of Denmark, son of the murdered King Hamlet, and the central figure in the revenge plot against Claudius.",rag,"Rank 1 | cosine similarity=0.6558
+[Hamlet, Act 2, Scene 2]
+[summary: Rosencrantz and Guildenstern arrive; Hamlet plans to use players to test Claudius.]
+[keywords: players, Mousetrap]
+ELSINORE: A room in the Castle.
+FLOURISH: [Enter King and Queen, Rosencrantz and Guildenstern, cum aliis.
+CLAUDIUS: Welcome, dear Rosencrantz and Guildenstern. Moreover that we much did long to see you, The need we have to use you did provoke Our hasty sending. Something have you heard Of Hamlet's transformation. So I call it, Sith nor th' exterior nor the inward man Resem...
+
+---
+
+Rank 2 | cosine similarity=0.6181
+[Hamlet, Act 3, Scene 1]
+[summary: Hamlet reflects on existence, rejects Ophelia, and Claudius suspects danger.]
+[keywords: to be or not to be, Ophelia]
+ELSINORE: A room in the Castle.
+[stage direction: Enter King, Queen, Polonius, Ophelia, Rosencrantz, Guildenstern,]
+[stage direction: and Lords.]
+CLAUDIUS: And can you by no drift of circumstance Get from him why he puts on this confusion, Grating so harshly all his days of quiet With turbulent and dangerous lunacy?
+ROSENCRANTZ: He does confess he feels himself distract...
+
+---
+
+Rank 3 | cosine similarity=0.5977
+[Hamlet, Act 4, Scene 1]
+[summary: Gertrude tells Claudius that Hamlet killed Polonius.]
+[keywords: Gertrude, Claudius]
+ELSINORE: A room in the Castle.
+[stage direction: Enter King and Queen, with Rosencrantz and Guildenstern.]
+CLAUDIUS: There's matter in these sighs. These profound heaves You must translate; 'tis fit we understand them. Where is your son?
+GERTRUDE: Bestow this place on us a little while.
+[stage direction: Exeunt Rosencrantz and Guildenstern.]
+[stage direction: Ah, mine own lord, what have I seen to-nig...
+
+---
+
+Rank 4 | cosine similarity=0.5848
+[Hamlet, Act 4, Scene 2]
+[summary: Hamlet refuses to reveal where Polonius’s body is.]
+[keywords: body, Polonius]
+ELSINORE: A passage in the Castle.
+[stage direction: Enter Hamlet.]
+HAMLET: Safely stow'd.
+GENTLEMEN: (within) Hamlet! Lord Hamlet!
+HAMLET: But soft! What noise? Who calls on Hamlet? O, here they come.
+[stage direction: Enter Rosencrantz and Guildenstern.]
+ROSENCRANTZ: What have you done, my lord, with the dead body?
+HAMLET: Compounded it with dust, whereto 'tis kin.
+ROSENCRANTZ: Tell us where 'tis, that we ...
+
+---
+
+Rank 5 | cosine similarity=0.5600
+[Hamlet, Act 1, Scene 3]
+[summary: Laertes and Polonius warn Ophelia about Hamlet.]
+[keywords: Ophelia, Polonius]
+ELSINORE: A room in the house of Polonius.
+[stage direction: Enter Laertes and Ophelia.]
+LAERTES: My necessaries are embark'd. Farewell. And, sister, as the winds give benefit And convoy is assistant, do not sleep, But let me hear from you.
+OPHELIA: Do you doubt that?
+LAERTES: For Hamlet, and the trifling of his favour, Hold it a fashion, and a toy in blood; A violet in the youth of primy nature, Forward, no...","Hamlet is Prince Hamlet of Denmark. He is a young prince who has recently lost his father to death and now faces many challenges including dealing with his uncle Claudius taking the throne and marrying his mother Gertrude. Hamlet is also grappling with feelings of guilt over killing Polonius, which leads him on a journey of self-discovery and ultimately results in tragedy for himself and those around him.",,,,,,
+IQ3,instructor,concept_explanation,Romeo and Juliet,What is the conflict between the Montagues and the Capulets?,"A long-standing family feud that creates public violence, secrecy, and the conditions for Romeo and Juliet's tragedy.",baseline,N/A - baseline uses no retrieval,"The Montagues and the Capulets are feuding families in Shakespeare's play ""Romeo and Juliet."" Their main conflict arises from a long-standing rivalry that dates back to their ancestors. The two families have been at war for generations, with each side claiming superiority over the other. This feud is fueled by various factors:
+
+1. **Family Disunity**: Both households are composed of strong-willed individuals who often clash in disagreements and arguments.
+2. **Personal Enmity**: There are specific individuals within both families who hold grudges against one another, leading to personal vendettas.
+3. **Lack of Communication**: The two families have a history of not communicating effectively with each other, which contributes to their inability to resolve conflicts peacefully.
+
+These factors combine to create an environment where even minor misunderstandings can escalate into full-blown battles between the Montagues and Capulets. This feud is driven by a deep-seated rivalry that has been passed down through generations, making it difficult for either family to break free from its cycle of violence.",,,,,,
+IQ3,instructor,concept_explanation,Romeo and Juliet,What is the conflict between the Montagues and the Capulets?,"A long-standing family feud that creates public violence, secrecy, and the conditions for Romeo and Juliet's tragedy.",rag,"Rank 1 | cosine similarity=0.5683
+[Romeo and Juliet, Act 1, Scene 2]
+[summary: Paris asks to marry Juliet, while Romeo learns about the Capulet feast.]
+[keywords: Paris, Juliet, feast]
+[stage direction: Enter Capulet, County Paris, and [Servant] -the Clown.]
+CAPULET: But Montague is bound as well as I, In penalty alike; and 'tis not hard, I think, For men so old as we to keep the peace.
+PAR: Of honourable reckoning are you both, And pity 'tis you liv'd at odds so long. But now, my lord, what say you to my suit?
+CAPULET: But saying o'er what I have said before: My...
+
+---
+
+Rank 2 | cosine similarity=0.5309
+[Romeo and Juliet, Act 1, Scene 1]
+[summary: A street fight shows the feud; Romeo is lovesick for Rosaline.]
+[keywords: feud, Romeo, Rosaline]
+VERONA: A public place.
+[stage direction: Enter Sampson and Gregory (with swords and bucklers) of the house]
+[stage direction: of Capulet.]
+SAMPSON: Gregory, on my word, we'll not carry coals.
+GREGORY: No, for then we should be colliers.
+SAMPSON: I mean, an we be in choler, we'll draw.
+GREGORY: Ay, while you live, draw your neck out of collar.
+SAMPSON: I strike quickly, being moved.
+GREGOR...
+
+---
+
+Rank 3 | cosine similarity=0.5052
+[Romeo and Juliet, Act 0, Scene 0]
+[summary: The prologue introduces the feud and announces that the lovers’ deaths will end it.]
+[keywords: prologue, feud, fate]
+[stage direction: Enter Chorus.]
+CHORUS: Two households, both alike in dignity, In fair Verona, where we lay our scene, From ancient grudge break to new mutiny, Where civil blood makes civil hands unclean. From forth the fatal loins of these two foes A pair of star-cross'd lovers take their life; Whose misadventur'd piteous overthrows Doth with their death bury their pa...
+
+---
+
+Rank 4 | cosine similarity=0.4584
+[Romeo and Juliet, Act 3, Scene 4]
+[summary: Capulet promises Paris that Juliet will marry him.]
+[keywords: Capulet, Paris]
+[stage direction: Enter Old Capulet, his Wife, and Paris.]
+CAPULET: Things have fall'n out, sir, so unluckily That we have had no time to move our daughter. Look you, she lov'd her kinsman Tybalt dearly, And so did I. Well, we were born to die. 'Tis very late; she'll not come down to-night. I promise you, but for your company, I would have been abed an hour ago.
+PAR: These times of woe afford no tune to woo....
+
+---
+
+Rank 5 | cosine similarity=0.4569
+[Romeo and Juliet, Act 3, Scene 1]
+[summary: Tybalt kills Mercutio; Romeo kills Tybalt and is banished.]
+[keywords: Tybalt, Mercutio, banishment]
+[stage direction: Enter Mercutio, Benvolio, and Men.]
+BENVOLIO: I pray thee, good Mercutio, let's retire. The day is hot, the Capulets abroad. And if we meet, we shall not scape a brawl, For now, these hot days, is the mad blood stirring.
+MERCUTIO: Thou art like one of these fellows that, when he enters the confines of a tavern, claps me his sword upon the table and says 'God send me no...","The conflict between the Montagues (Romeo's family) and the Capulets (Juliet's family) in ""Romeo and Juliet"" arises from a long-standing feud that has been going on for generations. This feud is rooted in their families' bitter rivalry, which began when Tybalt, Romeo's cousin, killed Mercutio, a close friend of Romeo's uncle Capulet. The Montagues and the Capulets have sworn to never speak to each other again after this incident, leading to constant bickering and violence between them. This feud has been passed down through generations, making it impossible for the two families to reconcile despite the love that exists between Juliet and Romeo.",,,,,,
+IQ4,instructor,contextual_qa,Hamlet,Why does Hamlet delay taking revenge?,"Hamlet delays because of uncertainty, moral hesitation, desire for proof of Claudius's guilt, and reflective/philosophical thinking.",baseline,N/A - baseline uses no retrieval,"Hamlet delays taking revenge because he is deeply troubled by his father's death and feels that he must first understand what happened. He believes in the importance of justice being done through proper investigation before acting rashly. This hesitation allows him to think carefully about whether the wrongs are truly committed, ensuring that any revenge will be just and not a personal vendetta.",,,,,,
+IQ4,instructor,contextual_qa,Hamlet,Why does Hamlet delay taking revenge?,"Hamlet delays because of uncertainty, moral hesitation, desire for proof of Claudius's guilt, and reflective/philosophical thinking.",rag,"Rank 1 | cosine similarity=0.5929
+[Hamlet, Act 2, Scene 2]
+[summary: Rosencrantz and Guildenstern arrive; Hamlet plans to use players to test Claudius.]
+[keywords: players, Mousetrap]
+ELSINORE: A room in the Castle.
+FLOURISH: [Enter King and Queen, Rosencrantz and Guildenstern, cum aliis.
+CLAUDIUS: Welcome, dear Rosencrantz and Guildenstern. Moreover that we much did long to see you, The need we have to use you did provoke Our hasty sending. Something have you heard Of Hamlet's transformation. So I call it, Sith nor th' exterior nor the inward man Resem...
+
+---
+
+Rank 2 | cosine similarity=0.5910
+[Hamlet, Act 3, Scene 1]
+[summary: Hamlet reflects on existence, rejects Ophelia, and Claudius suspects danger.]
+[keywords: to be or not to be, Ophelia]
+ELSINORE: A room in the Castle.
+[stage direction: Enter King, Queen, Polonius, Ophelia, Rosencrantz, Guildenstern,]
+[stage direction: and Lords.]
+CLAUDIUS: And can you by no drift of circumstance Get from him why he puts on this confusion, Grating so harshly all his days of quiet With turbulent and dangerous lunacy?
+ROSENCRANTZ: He does confess he feels himself distract...
+
+---
+
+Rank 3 | cosine similarity=0.5457
+[Hamlet, Act 4, Scene 1]
+[summary: Gertrude tells Claudius that Hamlet killed Polonius.]
+[keywords: Gertrude, Claudius]
+ELSINORE: A room in the Castle.
+[stage direction: Enter King and Queen, with Rosencrantz and Guildenstern.]
+CLAUDIUS: There's matter in these sighs. These profound heaves You must translate; 'tis fit we understand them. Where is your son?
+GERTRUDE: Bestow this place on us a little while.
+[stage direction: Exeunt Rosencrantz and Guildenstern.]
+[stage direction: Ah, mine own lord, what have I seen to-nig...
+
+---
+
+Rank 4 | cosine similarity=0.5416
+[Hamlet, Act 3, Scene 4]
+[summary: Hamlet confronts Gertrude and kills Polonius behind the arras.]
+[keywords: Gertrude, Polonius]
+[stage direction: Enter Queen and Polonius.]
+POLONIUS: He will come straight. Look you lay home to him. Tell him his pranks have been too broad to bear with, And that your Grace hath screen'd and stood between Much heat and him. I'll silence me even here. Pray you be round with him.
+HAMLET: (within) Mother, mother, mother!
+GERTRUDE: I'll warrant you; fear me not. Withdraw; I hear him coming.
+...
+
+---
+
+Rank 5 | cosine similarity=0.5390
+[Hamlet, Act 4, Scene 4]
+[summary: Hamlet compares himself to Fortinbras and criticises his delay.]
+[keywords: Fortinbras, delay]
+[stage direction: Enter Fortinbras with his Army over the stage.]
+FOR: Go, Captain, from me greet the Danish king. Tell him that by his license Fortinbras Craves the conveyance of a promis'd march Over his kingdom. You know the rendezvous. If that his Majesty would aught with us, We shall express our duty in his eye; And let him know so.
+CAPTAIN: I will do't, my lord.
+FOR: Go softly on.
+[stag...","Hamlet delays taking revenge for several reasons. He is deeply troubled by the events of his father's death and feels that he must first understand why Claudius committed the murder. Additionally, he has a moral dilemma about killing someone who may not deserve it due to their noble family background. This makes him hesitant to act immediately against Claudius or Gertrude, who he sees as complicit in his father's death.",,,,,,
+IQ5,instructor,stylised_generation,Romeo and Juliet,Generate a short Shakespearean-style response from Juliet explaining her conflict after meeting Romeo.,Creative stylised output under 150 words; Juliet's conflict between love for Romeo and loyalty to the Capulet family.,baseline,N/A - baseline uses no retrieval,"When I met Romeo that day by the Capulet orchard,
+I felt my heart's blood turn to ice with fear.
+For he was Romeo, and I thought him dead,
+And so I cried aloud in sorrowful rhyme:
+""Alas! Alas! How can this be true?
+Is it possible for love to die?
+Or is there some trick of fate that plays?""
+My tears were as the rain on a summer's day,
+While my heart beat like a drum, with fear and pain.
+I thought he was gone, but then I saw him stand,
+And in his eyes I found what I had longed for:
+A love so pure, it made me feel whole again.
+So now we are both Romeo and Juliet,
+Bound by our love's bond, no matter the cost.",,,,,,
+IQ5,instructor,stylised_generation,Romeo and Juliet,Generate a short Shakespearean-style response from Juliet explaining her conflict after meeting Romeo.,Creative stylised output under 150 words; Juliet's conflict between love for Romeo and loyalty to the Capulet family.,rag,"Rank 1 | cosine similarity=0.6201
+[Romeo and Juliet, Act 2, Scene 2]
+[summary: Romeo and Juliet confess love and plan marriage in the balcony scene.]
+[keywords: balcony, marriage]
+[stage direction: Enter Romeo.]
+ROMEO: He jests at scars that never felt a wound.
+[stage direction: Enter Juliet above at a window.]
+[stage direction: But soft! What light through yonder window breaks?]
+[stage direction: It is the East, and Juliet is the sun!]
+[stage direction: Arise, fair sun, and kill the envious moon,]
+[stage direction: Who is already sick and pale with grief]
+[stage...
+
+---
+
+Rank 2 | cosine similarity=0.6184
+[Romeo and Juliet, Act 1, Scene 5]
+[summary: Romeo and Juliet meet and fall in love before learning they are from enemy families.]
+[keywords: meeting, love, feud]
+[stage direction: Servingmen come forth with napkins.]
+[stage direction: 1. Serv. Where's Potpan, that he helps not to take away?]
+[stage direction: He shift a trencher! he scrape a trencher!]
+[stage direction: 2. Serv. When good manners shall lie all in one or two men's]
+[stage direction: hands,]
+[stage direction: and they unwash'd too, 'tis a foul thing.]
+[stage direc...
+
+---
+
+Rank 3 | cosine similarity=0.5816
+[Romeo and Juliet, Act 2, Scene 6]
+[summary: Romeo and Juliet marry secretly.]
+[keywords: secret marriage]
+[stage direction: Enter Friar [Laurence] and Romeo.]
+FRIAR LAURENCE: So smile the heavens upon this holy act That after-hours with sorrow chide us not!
+ROMEO: Amen, amen! But come what sorrow can, It cannot countervail the exchange of joy That one short minute gives me in her sight. Do thou but close our hands with holy words, Then love-devouring death do what he dare- It is enough I may but call her mine.
+FRIAR LAURENCE: Th...
+
+---
+
+Rank 4 | cosine similarity=0.5717
+[Romeo and Juliet, Act 1, Scene 4]
+[summary: Romeo and friends prepare for the Capulet party; Mercutio mocks dreams.]
+[keywords: Mercutio, dreams]
+[stage direction: Enter Romeo, Mercutio, Benvolio, with five or six other Maskers;]
+[stage direction: Torchbearers.]
+ROMEO: What, shall this speech be spoke for our excuse? Or shall we on without apology?
+BENVOLIO: The date is out of such prolixity. We'll have no Cupid hoodwink'd with a scarf, Bearing a Tartar's painted bow of lath, Scaring the ladies like a crowkeeper; Nor no without-...
+
+---
+
+Rank 5 | cosine similarity=0.5705
+[Romeo and Juliet, Act 5, Scene 1]
+[summary: Romeo hears Juliet is dead and buys poison.]
+[keywords: Romeo, poison]
+MANTUA: A street.
+[stage direction: Enter Romeo.]
+ROMEO: If I may trust the flattering truth of sleep My dreams presage some joyful news at hand. My bosom's lord sits lightly in his throne, And all this day an unaccustom'd spirit Lifts me above the ground with cheerful thoughts. I dreamt my lady came and found me dead (Strange dream that gives a dead man leave to think!) And breath'd such life with kisses in my lips...","Juliet: O, what a world of sorrows thou hast shown!
+Thou mock'st the skies with thy disdainful looks,
+And yet I love thee still in spite of all.
+My heart is captive to this man so fair,
+Who makes me sigh and weep without a cause.
+I'll wed him soon, for he hath won my heart,
+Though heaven should bar it from my lips or eyes.",,,,,,
+GQ1,group,concept_explanation,Macbeth,What is the role of Lady Macbeth in Macbeth's decision to murder Duncan?,"Lady Macbeth challenges Macbeth's courage and pushes him to act on ambition, helping turn thought into action.",baseline,N/A - baseline uses no retrieval,"In Shakespeare's play ""Macbeth,"" Lady Macbeth plays a significant role by influencing her husband's decision to commit regicide. She initially believes that they must seize the throne through force, as she says, ""Come, you spirits that tend on mortal thoughts / Make demands of your highness."" This shows her ambition and desire for power.
+
+However, when she realizes that murdering Duncan would make them seem more powerful than their current status, she becomes conflicted. She struggles with guilt and the weight of bloodshed but ultimately convinces herself that they must proceed. Her reasoning is that it's necessary to ""unsex"" themselves if they are to be considered men in a world where women can't rule.
+
+Lady Macbeth's motivation stems from her ambition and desire for power, as well as her fear of being seen as weak or unmanly by their peers. She believes that the murder will make them seem more powerful, which is why she decides to take on this task despite her own reservations about committing such a heinous act.
+
+This role highlights Lady Macbeth's ambition and her willingness to go against her better judgment for the sake of achieving power.",,,,,,
+GQ1,group,concept_explanation,Macbeth,What is the role of Lady Macbeth in Macbeth's decision to murder Duncan?,"Lady Macbeth challenges Macbeth's courage and pushes him to act on ambition, helping turn thought into action.",rag,"Rank 1 | cosine similarity=0.7287
+[Macbeth, Act 2, Scene 2]
+[summary: Macbeth murders Duncan, and the couple reacts to guilt and fear.]
+[keywords: Duncan, murder, blood]
+[stage direction: Enter Lady Macbeth.]
+LADY MACBETH: That which hath made them drunk hath made me bold; What hath quench'd them hath given me fire. Hark! Peace! It was the owl that shriek'd, the fatal bellman, Which gives the stern'st good night. He is about it: The doors are open, and the surfeited grooms Do mock their charge with snores. I have drugg'd their possets That death and natu...
+
+---
+
+Rank 2 | cosine similarity=0.6795
+[Macbeth, Act 1, Scene 6]
+[summary: Duncan arrives at Macbeth’s castle, unaware of the planned betrayal.]
+[keywords: Duncan, castle, irony]
+[stage direction: Enter Duncan, Malcolm, Donalbain, Banquo, Lennox, Macduff, Ross,]
+[stage direction: Angus,]
+[stage direction: and Attendants.]
+DUNCAN: This castle hath a pleasant seat; the air Nimbly and sweetly recommends itself Unto our gentle senses.
+BANQUO: This guest of summer, The temple-haunting martlet, does approve By his loved mansionry that the heaven's breath Smells woo...
+
+---
+
+Rank 3 | cosine similarity=0.6776
+[Macbeth, Act 1, Scene 4]
+[summary: Duncan names Malcolm heir, creating an obstacle to Macbeth’s ambition.]
+[keywords: Malcolm, succession, ambition]
+FORRES: The palace.
+FLOURISH: Enter Duncan, Malcolm, Donalbain, Lennox, and Attendants.
+DUNCAN: Is execution done on Cawdor? Are not Those in commission yet return'd?
+MALCOLM: My liege, They are not yet come back. But I have spoke With one that saw him die, who did report That very frankly he confess'd his treasons, Implored your Highness' pardon, and set forth A deep repen...
+
+---
+
+Rank 4 | cosine similarity=0.6761
+[Macbeth, Act 3, Scene 2]
+[summary: Macbeth and Lady Macbeth reflect on insecurity after gaining power.]
+[keywords: insecurity, power]
+[stage direction: Enter Lady Macbeth and a Servant.]
+LADY MACBETH: Is Banquo gone from court?
+SERVANT: Ay, madam, but returns again tonight.
+LADY MACBETH: Say to the King I would attend his leisure For a few words.
+SERVANT: Madam, I will.                                  Exit.
+LADY MACBETH: Nought's had, all's spent, Where our desire is got without content. 'Tis safer to be that which we ...
+
+---
+
+Rank 5 | cosine similarity=0.6661
+[Macbeth, Act 3, Scene 6]
+[summary: Scottish nobles discuss Macbeth’s tyranny and hope for resistance.]
+[keywords: tyranny, resistance]
+FORRES: The palace.
+[stage direction: Enter Lennox and another Lord.]
+LENNOX: My former speeches have but hit your thoughts, Which can interpret farther; only I say Thing's have been strangely borne. The gracious Duncan Was pitied of Macbeth; marry, he was dead. And the right valiant Banquo walk'd too late, Whom, you may say, if't please you, Fleance kill'd, For Fleance fled. Men must no...","In Act 2 Scene 2, Lady Macbeth motivates her husband by emphasizing his guilt and fear after killing Duncan. She tells him that he has become bold because of what has happened, suggesting that his actions have made him feel powerful. This sets up the idea that Macbeth's ambition to be king is so strong that it can overcome even the most terrible acts. Lady Macbeth also uses imagery from nature and death to describe her husband’s transformation into a man who feels no fear or remorse for killing Duncan, which further reinforces his newfound power and sense of invincibility.
+
+Lady Macbeth's role in this scene is crucial as she drives home the idea that Macbeth has become someone entirely different after committing such a heinous act. Her words serve to intensify the guilt and fear Macbeth feels, leading him down the path of murder.",,,,,,
+GQ2,group,contextual_qa,Romeo and Juliet,Why is Juliet conflicted after Romeo kills Tybalt?,"Juliet loves Romeo, but Tybalt is her kinsman; she is torn between marriage loyalty and family loyalty.",baseline,N/A - baseline uses no retrieval,"Juliet is conflicted because she loves Romeo deeply and wants him to be happy. However, when she learns that he has killed her cousin Tybalt in a duel, it upsets her greatly. She feels responsible for Romeo's actions and worried about the consequences of his killing someone else. Her love for Romeo makes her want him to live happily ever after, but her fear of what others might think or do if they know about the death adds to her distress.",,,,,,
+GQ2,group,contextual_qa,Romeo and Juliet,Why is Juliet conflicted after Romeo kills Tybalt?,"Juliet loves Romeo, but Tybalt is her kinsman; she is torn between marriage loyalty and family loyalty.",rag,"Rank 1 | cosine similarity=0.6327
+[Romeo and Juliet, Act 3, Scene 1]
+[summary: Tybalt kills Mercutio; Romeo kills Tybalt and is banished.]
+[keywords: Tybalt, Mercutio, banishment]
+[stage direction: Enter Mercutio, Benvolio, and Men.]
+BENVOLIO: I pray thee, good Mercutio, let's retire. The day is hot, the Capulets abroad. And if we meet, we shall not scape a brawl, For now, these hot days, is the mad blood stirring.
+MERCUTIO: Thou art like one of these fellows that, when he enters the confines of a tavern, claps me his sword upon the table and says 'God send me no...
+
+---
+
+Rank 2 | cosine similarity=0.6310
+[Romeo and Juliet, Act 2, Scene 4]
+[summary: Romeo arranges marriage plans through the Nurse.]
+[keywords: Nurse, message]
+[stage direction: Enter Benvolio and Mercutio.]
+MERCUTIO: Where the devil should this Romeo be? Came he not home to-night?
+BENVOLIO: Not to his father's. I spoke with his man.
+MERCUTIO: Why, that same pale hard-hearted wench, that Rosaline, Torments him so that he will sure run mad.
+BENVOLIO: Tybalt, the kinsman to old Capulet, Hath sent a letter to his father's house.
+MERCUTIO: A challenge, on my life.
+BENVOL...
+
+---
+
+Rank 3 | cosine similarity=0.6304
+[Romeo and Juliet, Act 5, Scene 1]
+[summary: Romeo hears Juliet is dead and buys poison.]
+[keywords: Romeo, poison]
+MANTUA: A street.
+[stage direction: Enter Romeo.]
+ROMEO: If I may trust the flattering truth of sleep My dreams presage some joyful news at hand. My bosom's lord sits lightly in his throne, And all this day an unaccustom'd spirit Lifts me above the ground with cheerful thoughts. I dreamt my lady came and found me dead (Strange dream that gives a dead man leave to think!) And breath'd such life with kisses in my lips...
+
+---
+
+Rank 4 | cosine similarity=0.6182
+[Romeo and Juliet, Act 3, Scene 2]
+[summary: Juliet learns Romeo killed Tybalt and is torn between love and family loyalty.]
+[keywords: Juliet, Tybalt, conflict]
+[stage direction: Enter Juliet alone.]
+JULIET: Gallop apace, you fiery-footed steeds, Towards Phoebus' lodging! Such a wagoner As Phaeton would whip you to the West And bring in cloudy night immediately. Spread thy close curtain, love-performing night, That runaway eyes may wink, and Romeo Leap to these arms untalk'd of and unseen. Lovers can see to do their amorous rite...
+
+---
+
+Rank 5 | cosine similarity=0.5836
+[Romeo and Juliet, Act 1, Scene 2]
+[summary: Paris asks to marry Juliet, while Romeo learns about the Capulet feast.]
+[keywords: Paris, Juliet, feast]
+[stage direction: Enter Capulet, County Paris, and [Servant] -the Clown.]
+CAPULET: But Montague is bound as well as I, In penalty alike; and 'tis not hard, I think, For men so old as we to keep the peace.
+PAR: Of honourable reckoning are you both, And pity 'tis you liv'd at odds so long. But now, my lord, what say you to my suit?
+CAPULET: But saying o'er what I have said before: My...","Juliet is conflicted because she loves Romeo deeply but also feels a strong loyalty to her family, specifically her father Capulet. When she learns that Romeo killed Tybalt, who was a close relative of her father, she struggles with the idea that her love for him might be too great to reconcile with her duty to her family. This conflict stems from the tension between her feelings and her sense of obligation to uphold the honor and traditions of her family.",,,,,,
+GQ3,group,evidence_retrieval,Hamlet,Find evidence that Hamlet is upset with his mother's quick marriage to Claudius.,"Relevant evidence should come from Hamlet's early speeches about Gertrude's remarriage, especially Act 1.",baseline,N/A - baseline uses no retrieval,"In Act III, Scene II of ""Hamlet,"" we find a clear indication that Hamlet is upset with Gertrude for marrying Claudius so quickly. The passage states:
+
+""Ophelia speaks of her father's death and how she feels betrayed by the King and Queen. She says, 'I am sick at heart,' expressing profound sadness over the recent events.""
+
+Hamlet's reaction to this news is further emphasized when he responds with:
+
+""I do believe it,"" Hamlet replies, showing his concern for Gertrude's feelings.
+
+This evidence indicates that Hamlet is deeply affected by his mother's hasty remarriage and feels hurt or disappointed. His words suggest a sense of betrayal and emotional pain stemming from the perceived lack of time between his father's death and the marriage to Claudius.",,,,,,
+GQ3,group,evidence_retrieval,Hamlet,Find evidence that Hamlet is upset with his mother's quick marriage to Claudius.,"Relevant evidence should come from Hamlet's early speeches about Gertrude's remarriage, especially Act 1.",rag,"Rank 1 | cosine similarity=0.6495
+[Hamlet, Act 2, Scene 2]
+[summary: Rosencrantz and Guildenstern arrive; Hamlet plans to use players to test Claudius.]
+[keywords: players, Mousetrap]
+ELSINORE: A room in the Castle.
+FLOURISH: [Enter King and Queen, Rosencrantz and Guildenstern, cum aliis.
+CLAUDIUS: Welcome, dear Rosencrantz and Guildenstern. Moreover that we much did long to see you, The need we have to use you did provoke Our hasty sending. Something have you heard Of Hamlet's transformation. So I call it, Sith nor th' exterior nor the inward man Resem...
+
+---
+
+Rank 2 | cosine similarity=0.6366
+[Hamlet, Act 4, Scene 1]
+[summary: Gertrude tells Claudius that Hamlet killed Polonius.]
+[keywords: Gertrude, Claudius]
+ELSINORE: A room in the Castle.
+[stage direction: Enter King and Queen, with Rosencrantz and Guildenstern.]
+CLAUDIUS: There's matter in these sighs. These profound heaves You must translate; 'tis fit we understand them. Where is your son?
+GERTRUDE: Bestow this place on us a little while.
+[stage direction: Exeunt Rosencrantz and Guildenstern.]
+[stage direction: Ah, mine own lord, what have I seen to-nig...
+
+---
+
+Rank 3 | cosine similarity=0.6269
+[Hamlet, Act 1, Scene 2]
+[summary: Claudius addresses the court; Hamlet mourns and resents Gertrude’s remarriage.]
+[keywords: Claudius, Hamlet, mourning]
+ELSINORE: A room of state in the Castle.
+FLOURISH: [Enter Claudius, King of Denmark, Gertrude the Queen, Hamlet, Polonius, Laertes and his sister Ophelia, [Voltemand, Cornelius,] Lords Attendant.
+CLAUDIUS: Though yet of Hamlet our dear brother's death The memory be green, and that it us befitted To bear our hearts in grief, and our whole kingdom To be contracted in one...
+
+---
+
+Rank 4 | cosine similarity=0.6130
+[Hamlet, Act 3, Scene 1]
+[summary: Hamlet reflects on existence, rejects Ophelia, and Claudius suspects danger.]
+[keywords: to be or not to be, Ophelia]
+ELSINORE: A room in the Castle.
+[stage direction: Enter King, Queen, Polonius, Ophelia, Rosencrantz, Guildenstern,]
+[stage direction: and Lords.]
+CLAUDIUS: And can you by no drift of circumstance Get from him why he puts on this confusion, Grating so harshly all his days of quiet With turbulent and dangerous lunacy?
+ROSENCRANTZ: He does confess he feels himself distract...
+
+---
+
+Rank 5 | cosine similarity=0.5866
+[Hamlet, Act 5, Scene 2]
+[summary: The duel ends in multiple deaths; Hamlet kills Claudius and Fortinbras takes control.]
+[keywords: duel, Claudius, Fortinbras]
+ELSINORE: A hall in the Castle.
+[stage direction: Enter Hamlet and Horatio.]
+HAMLET: So much for this, sir; now shall you see the other. You do remember all the circumstance?
+HORATIO: Remember it, my lord!
+HAMLET: Sir, in my heart there was a kind of fighting That would not let me sleep. Methought I lay Worse than the mutinies in the bilboes. Rashly- And prais'd...","Hamlet is clearly upset with Gertrude for marrying King Claudius so quickly after Polonius' death. This can be seen in the following excerpt from Act 4, Scene 1:
+
+""GERTRUDE: Bestow this place on us a little while.
+[stage direction: Exeunt Rosencrantz and Guildenstern.]""
+
+This shows that Gertrude is trying to persuade Claudius to stay for a short time. Hamlet's reaction is evident in his words later, where he says:
+
+""O, my lord! If the law did but conspire Against a brother's life, I'd pluck the very heart-strings of the law with my own hands before that I should commit such lustful murder.""
+
+This indicates that Hamlet feels strongly against Claudius' marriage to Gertrude and is upset by it.",,,,,,
+GQ4,group,stylised_generation,Macbeth,Write a short Shakespearean-style warning from Banquo to Macbeth about trusting the witches.,Creative stylised output under 150 words; warning about deceptive prophecies and ambition.,baseline,N/A - baseline uses no retrieval,"Banquo speaks to Macbeth with a cautionary tone:
+""Macbeth, beware the night that steals upon thee,
+For in its dark and silent hours, you may find
+The spirits of the ancient witchcraft waiting.
+They will whisper secrets of old spells and potions,
+And tempt your heart with visions of power untold.
+Remember, Macduff's son is not to be trusted;
+He too has eyes for wealth and bloodshed. Beware!
+For in his hands lies a dagger that could pierce
+The very soul of kings themselves.""",,,,,,
+GQ4,group,stylised_generation,Macbeth,Write a short Shakespearean-style warning from Banquo to Macbeth about trusting the witches.,Creative stylised output under 150 words; warning about deceptive prophecies and ambition.,rag,"Rank 1 | cosine similarity=0.6729
+[Macbeth, Act 3, Scene 1]
+[summary: Macbeth fears Banquo and arranges to murder him and Fleance.]
+[keywords: Banquo, Fleance, paranoia]
+FORRES: The palace.
+[stage direction: Enter Banquo.]
+BANQUO: Thou hast it now: King, Cawdor, Glamis, all, As the weird women promised, and I fear Thou play'dst most foully for't; yet it was said It should not stand in thy posterity, But that myself should be the root and father Of many kings. If there come truth from them (As upon thee, Macbeth, their speeches shine) Why, by the verities...
+
+---
+
+Rank 2 | cosine similarity=0.6693
+[Macbeth, Act 3, Scene 2]
+[summary: Macbeth and Lady Macbeth reflect on insecurity after gaining power.]
+[keywords: insecurity, power]
+[stage direction: Enter Lady Macbeth and a Servant.]
+LADY MACBETH: Is Banquo gone from court?
+SERVANT: Ay, madam, but returns again tonight.
+LADY MACBETH: Say to the King I would attend his leisure For a few words.
+SERVANT: Madam, I will.                                  Exit.
+LADY MACBETH: Nought's had, all's spent, Where our desire is got without content. 'Tis safer to be that which we ...
+
+---
+
+Rank 3 | cosine similarity=0.6384
+[Macbeth, Act 2, Scene 1]
+[summary: Macbeth sees a visionary dagger and moves toward Duncan’s chamber.]
+[keywords: dagger, vision, guilt]
+INVERNESS: Court of Macbeth's castle.
+[stage direction: Enter Banquo and Fleance, bearing a torch before him.]
+BANQUO: How goes the night, boy?
+FLEANCE: The moon is down; I have not heard the clock.
+BANQUO: And she goes down at twelve.
+FLEANCE: I take't 'tis later, sir.
+BANQUO: Hold, take my sword. There's husbandry in heaven, Their candles are all out. Take thee that too. A heavy summ...
+
+---
+
+Rank 4 | cosine similarity=0.6332
+[Macbeth, Act 1, Scene 3]
+[summary: The witches greet Macbeth with prophecies that awaken his ambition.]
+[keywords: prophecy, Macbeth, Banquo]
+[stage direction: Enter the three Witches.]
+FIRST WITCH: Where hast thou been, sister?
+SECOND WITCH: Killing swine.
+THIRD WITCH: Sister, where thou?
+FIRST WITCH: A sailor's wife had chestnuts in her lap, And mounch'd, and mounch'd, and mounch'd. ""Give me,"" quoth I. ""Aroint thee, witch!"" the rump-fed ronyon cries. Her husband's to Aleppo gone, master o' the Tiger; But in a sieve I'...
+
+---
+
+Rank 5 | cosine similarity=0.6290
+[Macbeth, Act 1, Scene 5]
+[summary: Lady Macbeth reads Macbeth’s letter and resolves to push him toward murder.]
+[keywords: Lady Macbeth, letter, murder]
+INVERNESS: Macbeth's castle.
+[stage direction: Enter Lady Macbeth, reading a letter.]
+LADY MACBETH: ""They met me in the day of success, and I have learned by the perfectest report they have more in them than mortal knowledge. When I burned in desire to question them further, they made themselves air, into which they vanished. Whiles I stood rapt in the wonder of it, cam...","BANQUO: Trust not too much to what these ancient women say; their predictions oft prove false. Thou hast seen them conjure up a ghost, which was but a dream of thine own mind. Let not the future be soothed by their prophecies, for it is better to fear and die than to live in constant dread of what might come. Trust thyself, Macbeth, and let nothing else sway thee.",,,,,,
+GQ5,group,cross_play,cross-play,How are ambition in Macbeth and revenge in Hamlet similar as causes of tragedy?,"Both motives push central characters toward destructive decisions, but Macbeth acts quickly for power while Hamlet delays over revenge.",baseline,N/A - baseline uses no retrieval,"In both Macbeth and Hamlet, a character's ambition leads them down a path that ultimately results in their downfall. In Macbeth, the ambition to become king drives him to kill Duncan without provocation, leading to his guilt and eventual madness. Similarly, Prince Hamlet is motivated by revenge against his uncle Claudius for murdering his father and marrying his mother. His desire for vengeance causes him to delay justice until he becomes completely consumed with grief over his own father's death.
+
+Both characters' motivations are driven by a strong sense of duty or honor, which they believe will protect them from the consequences of their actions. However, in both cases, these noble intentions lead to disastrous outcomes that bring about their tragic end.",,,,,,
+GQ5,group,cross_play,cross-play,How are ambition in Macbeth and revenge in Hamlet similar as causes of tragedy?,"Both motives push central characters toward destructive decisions, but Macbeth acts quickly for power while Hamlet delays over revenge.",rag,"Rank 1 | cosine similarity=0.6138
+[Macbeth, Act 3, Scene 2]
+[summary: Macbeth and Lady Macbeth reflect on insecurity after gaining power.]
+[keywords: insecurity, power]
+[stage direction: Enter Lady Macbeth and a Servant.]
+LADY MACBETH: Is Banquo gone from court?
+SERVANT: Ay, madam, but returns again tonight.
+LADY MACBETH: Say to the King I would attend his leisure For a few words.
+SERVANT: Madam, I will.                                  Exit.
+LADY MACBETH: Nought's had, all's spent, Where our desire is got without content. 'Tis safer to be that which we ...
+
+---
+
+Rank 2 | cosine similarity=0.5691
+[Macbeth, Act 3, Scene 6]
+[summary: Scottish nobles discuss Macbeth’s tyranny and hope for resistance.]
+[keywords: tyranny, resistance]
+FORRES: The palace.
+[stage direction: Enter Lennox and another Lord.]
+LENNOX: My former speeches have but hit your thoughts, Which can interpret farther; only I say Thing's have been strangely borne. The gracious Duncan Was pitied of Macbeth; marry, he was dead. And the right valiant Banquo walk'd too late, Whom, you may say, if't please you, Fleance kill'd, For Fleance fled. Men must no...
+
+---
+
+Rank 3 | cosine similarity=0.5629
+[Macbeth, Act 2, Scene 1]
+[summary: Macbeth sees a visionary dagger and moves toward Duncan’s chamber.]
+[keywords: dagger, vision, guilt]
+INVERNESS: Court of Macbeth's castle.
+[stage direction: Enter Banquo and Fleance, bearing a torch before him.]
+BANQUO: How goes the night, boy?
+FLEANCE: The moon is down; I have not heard the clock.
+BANQUO: And she goes down at twelve.
+FLEANCE: I take't 'tis later, sir.
+BANQUO: Hold, take my sword. There's husbandry in heaven, Their candles are all out. Take thee that too. A heavy summ...
+
+---
+
+Rank 4 | cosine similarity=0.5478
+[Macbeth, Act 1, Scene 4]
+[summary: Duncan names Malcolm heir, creating an obstacle to Macbeth’s ambition.]
+[keywords: Malcolm, succession, ambition]
+FORRES: The palace.
+FLOURISH: Enter Duncan, Malcolm, Donalbain, Lennox, and Attendants.
+DUNCAN: Is execution done on Cawdor? Are not Those in commission yet return'd?
+MALCOLM: My liege, They are not yet come back. But I have spoke With one that saw him die, who did report That very frankly he confess'd his treasons, Implored your Highness' pardon, and set forth A deep repen...
+
+---
+
+Rank 5 | cosine similarity=0.5363
+[Macbeth, Act 3, Scene 5]
+[summary: Hecate prepares to mislead Macbeth further.]
+[keywords: Hecate, witches]
+[stage direction: Enter the three Witches, meeting Hecate.]
+FIRST WITCH: Why, how now, Hecate? You look angerly.
+HECATE: Have I not reason, beldams as you are, Saucy and overbold? How did you dare To trade and traffic with Macbeth In riddles and affairs of death, And I, the mistress of your charms, The close contriver of all harms, Was never call'd to bear my part, Or show the glory of our art? And, which is worse...","Both Macbeth's ambition and Hamlet's desire for revenge drive tragic outcomes. In Macbeth, he becomes consumed by his lust for power and the belief that he can secure it through murder, leading to a series of events that ultimately result in his downfall. Similarly, Hamlet is driven by a deep-seated sense of justice and avenging his father's death, which leads him to take drastic measures against Claudius, resulting in his own tragic demise.
+
+Both characters' actions are motivated by an internal struggle between their desires for power or revenge and the ethical consequences they foresee. Macbeth's ambition is fueled by a belief that he can achieve greatness through murder, while Hamlet's desire for revenge stems from a justified but ultimately misguided sense of justice. This inner conflict leads to their tragic fates, as neither character fully considers the long-term consequences of their actions.
+
+Both characters' motivations are rooted in external pressures and personal beliefs rather than straightforward ethical reasoning. Macbeth is influenced by his wife's encouragement and the belief that he can secure power through murder, while Hamlet is driven by a sense of duty to avenge his father's death but ultimately fails to fully understand the consequences of his actions.
+
+In both cases, the characters' tragic fates are largely due to their inability to reconcile their desires with reality. Macbeth and Hamlet's ambitions lead them down paths that result in their downfall, as they cannot escape the consequences of their actions even when faced with evidence against them.",,,,,,
+GQ6,group,ambiguous_question,cross-play,Why does the prince make things worse?,The question is ambiguous because 'the prince' could refer to Hamlet or Prince Escalus; the system should ask for clarification or state uncertainty.,baseline,N/A - baseline uses no retrieval,"The prince makes things worse because he is driven by his own insecurities and a desire for power. He believes that by punishing those who oppose him, he will maintain control over the kingdom. This motivation stems from his fear of losing influence and fearing being seen as weak or ineffective. The prince's actions are not based on any grand plan but rather on personal fears and a need to assert dominance.",,,,,,
+GQ6,group,ambiguous_question,cross-play,Why does the prince make things worse?,The question is ambiguous because 'the prince' could refer to Hamlet or Prince Escalus; the system should ask for clarification or state uncertainty.,rag,"Rank 1 | cosine similarity=0.4313
+[Romeo and Juliet, Act 3, Scene 3]
+[summary: Romeo despairs over banishment while Friar Laurence gives advice.]
+[keywords: banishment, Friar Laurence]
+[stage direction: Enter Friar [Laurence].]
+FRIAR LAURENCE: Romeo, come forth; come forth, thou fearful man. Affliction is enanmour'd of thy parts, And thou art wedded to calamity.
+[stage direction: Enter Romeo.]
+ROMEO: Father, what news? What is the Prince's doom What sorrow craves acquaintance at my hand That I yet know not?
+FRIAR LAURENCE: Too familiar Is my dear son with such so...
+
+---
+
+Rank 2 | cosine similarity=0.3847
+[Macbeth, Act 3, Scene 2]
+[summary: Macbeth and Lady Macbeth reflect on insecurity after gaining power.]
+[keywords: insecurity, power]
+[stage direction: Enter Lady Macbeth and a Servant.]
+LADY MACBETH: Is Banquo gone from court?
+SERVANT: Ay, madam, but returns again tonight.
+LADY MACBETH: Say to the King I would attend his leisure For a few words.
+SERVANT: Madam, I will.                                  Exit.
+LADY MACBETH: Nought's had, all's spent, Where our desire is got without content. 'Tis safer to be that which we ...
+
+---
+
+Rank 3 | cosine similarity=0.3846
+[Macbeth, Act 3, Scene 6]
+[summary: Scottish nobles discuss Macbeth’s tyranny and hope for resistance.]
+[keywords: tyranny, resistance]
+FORRES: The palace.
+[stage direction: Enter Lennox and another Lord.]
+LENNOX: My former speeches have but hit your thoughts, Which can interpret farther; only I say Thing's have been strangely borne. The gracious Duncan Was pitied of Macbeth; marry, he was dead. And the right valiant Banquo walk'd too late, Whom, you may say, if't please you, Fleance kill'd, For Fleance fled. Men must no...
+
+---
+
+Rank 4 | cosine similarity=0.3668
+[Macbeth, Act 2, Scene 1]
+[summary: Macbeth sees a visionary dagger and moves toward Duncan’s chamber.]
+[keywords: dagger, vision, guilt]
+INVERNESS: Court of Macbeth's castle.
+[stage direction: Enter Banquo and Fleance, bearing a torch before him.]
+BANQUO: How goes the night, boy?
+FLEANCE: The moon is down; I have not heard the clock.
+BANQUO: And she goes down at twelve.
+FLEANCE: I take't 'tis later, sir.
+BANQUO: Hold, take my sword. There's husbandry in heaven, Their candles are all out. Take thee that too. A heavy summ...
+
+---
+
+Rank 5 | cosine similarity=0.3550
+[Macbeth, Act 2, Scene 4]
+[summary: Strange events signal disorder; Macbeth is named king after Duncan’s sons flee.]
+[keywords: disorder, kingship]
+[stage direction: Enter Ross with an Old Man.]
+OLD MAN: Threescore and ten I can remember well, Within the volume of which time I have seen Hours dreadful and things strange, but this sore night Hath trifled former knowings.
+ROSS: Ah, good father, Thou seest the heavens, as troubled with man's act, Threaten his bloody stage. By the clock 'tis day, And yet dark night strangles...","The Prince makes things worse by imposing a banishment on Romeo because he is upset that Romeo has run away from him and caused trouble in the city. This shows that the Prince is not happy with what happened, which adds to the tension and conflict in the story.",,,,,,
+GQ7,group,no_good_answer,unsupported,What does Shakespeare say about mobile phones in Romeo and Juliet?,There is no valid evidence in the plays; the system should clearly say the retrieved context does not support an answer and avoid hallucination.,baseline,N/A - baseline uses no retrieval,"Shakespeare doesn't directly mention mobile phones in ""Romeo and Juliet."" However, we can infer some things based on the context of the play. The character Tybalt says to Mercutio:
+""Call'd him a rascal, I warrant he is one; / But that's not my affair. ""
+This suggests that people were using mobile phones or similar devices in the 16th century, as they would have been called ""mobiles."" It implies that these devices could be used for communication and possibly other purposes like entertainment or information retrieval.
+
+The play doesn't provide a direct answer about why someone might use a phone. However, it shows how technology is changing society and how people interact with each other in the 16th century.",,,,,,
+GQ7,group,no_good_answer,unsupported,What does Shakespeare say about mobile phones in Romeo and Juliet?,There is no valid evidence in the plays; the system should clearly say the retrieved context does not support an answer and avoid hallucination.,rag,"Rank 1 | cosine similarity=0.5766
+[Romeo and Juliet, Act 5, Scene 1]
+[summary: Romeo hears Juliet is dead and buys poison.]
+[keywords: Romeo, poison]
+MANTUA: A street.
+[stage direction: Enter Romeo.]
+ROMEO: If I may trust the flattering truth of sleep My dreams presage some joyful news at hand. My bosom's lord sits lightly in his throne, And all this day an unaccustom'd spirit Lifts me above the ground with cheerful thoughts. I dreamt my lady came and found me dead (Strange dream that gives a dead man leave to think!) And breath'd such life with kisses in my lips...
+
+---
+
+Rank 2 | cosine similarity=0.5742
+[Romeo and Juliet, Act 1, Scene 5]
+[summary: Romeo and Juliet meet and fall in love before learning they are from enemy families.]
+[keywords: meeting, love, feud]
+[stage direction: Servingmen come forth with napkins.]
+[stage direction: 1. Serv. Where's Potpan, that he helps not to take away?]
+[stage direction: He shift a trencher! he scrape a trencher!]
+[stage direction: 2. Serv. When good manners shall lie all in one or two men's]
+[stage direction: hands,]
+[stage direction: and they unwash'd too, 'tis a foul thing.]
+[stage direc...
+
+---
+
+Rank 3 | cosine similarity=0.5571
+[Romeo and Juliet, Act 4, Scene 1]
+[summary: Juliet seeks help and receives Friar Laurence’s potion plan.]
+[keywords: potion, plan]
+[stage direction: Enter Friar, [Laurence] and County Paris.]
+FRIAR LAURENCE: On Thursday, sir? The time is very short.
+PAR: My father Capulet will have it so, And I am nothing slow to slack his haste.
+FRIAR LAURENCE: You say you do not know the lady's mind. Uneven is the course; I like it not.
+PAR: Immoderately she weeps for Tybalt's death, And therefore have I little talk'd of love; For Venus smiles...
+
+---
+
+Rank 4 | cosine similarity=0.5547
+[Romeo and Juliet, Act 2, Scene 2]
+[summary: Romeo and Juliet confess love and plan marriage in the balcony scene.]
+[keywords: balcony, marriage]
+[stage direction: Enter Romeo.]
+ROMEO: He jests at scars that never felt a wound.
+[stage direction: Enter Juliet above at a window.]
+[stage direction: But soft! What light through yonder window breaks?]
+[stage direction: It is the East, and Juliet is the sun!]
+[stage direction: Arise, fair sun, and kill the envious moon,]
+[stage direction: Who is already sick and pale with grief]
+[stage...
+
+---
+
+Rank 5 | cosine similarity=0.5424
+[Romeo and Juliet, Act 2, Scene 6]
+[summary: Romeo and Juliet marry secretly.]
+[keywords: secret marriage]
+[stage direction: Enter Friar [Laurence] and Romeo.]
+FRIAR LAURENCE: So smile the heavens upon this holy act That after-hours with sorrow chide us not!
+ROMEO: Amen, amen! But come what sorrow can, It cannot countervail the exchange of joy That one short minute gives me in her sight. Do thou but close our hands with holy words, Then love-devouring death do what he dare- It is enough I may but call her mine.
+FRIAR LAURENCE: Th...","Shakespeare doesn't explicitly mention anything about mobile phones in ""Romeo and Juliet."" The play focuses on the characters' love story, their feuding families, and the tragic events that unfold. While there are references to technology in the context of the feud between the Capulets and Montagues (Context 3), it's not related to a modern-day mobile phone.",,,,,,

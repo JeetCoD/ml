@@ -1,0 +1,98 @@
+[
+  {
+    "question_id": "IQ1",
+    "source": "instructor",
+    "type": "contextual_qa",
+    "play": "Macbeth",
+    "question": "Why does Macbeth kill Duncan?",
+    "expected_focus": "Macbeth's ambition, the witches' prophecy, Duncan as an obstacle to the crown, and Lady Macbeth's pressure."
+  },
+  {
+    "question_id": "IQ2",
+    "source": "instructor",
+    "type": "concept_explanation",
+    "play": "Hamlet",
+    "question": "Who is Hamlet?",
+    "expected_focus": "Hamlet is the Prince of Denmark, son of the murdered King Hamlet, and the central figure in the revenge plot against Claudius."
+  },
+  {
+    "question_id": "IQ3",
+    "source": "instructor",
+    "type": "concept_explanation",
+    "play": "Romeo and Juliet",
+    "question": "What is the conflict between the Montagues and the Capulets?",
+    "expected_focus": "A long-standing family feud that creates public violence, secrecy, and the conditions for Romeo and Juliet's tragedy."
+  },
+  {
+    "question_id": "IQ4",
+    "source": "instructor",
+    "type": "contextual_qa",
+    "play": "Hamlet",
+    "question": "Why does Hamlet delay taking revenge?",
+    "expected_focus": "Hamlet delays because of uncertainty, moral hesitation, desire for proof of Claudius's guilt, and reflective/philosophical thinking."
+  },
+  {
+    "question_id": "IQ5",
+    "source": "instructor",
+    "type": "stylised_generation",
+    "play": "Romeo and Juliet",
+    "question": "Generate a short Shakespearean-style response from Juliet explaining her conflict after meeting Romeo.",
+    "expected_focus": "Creative stylised output under 150 words; Juliet's conflict between love for Romeo and loyalty to the Capulet family."
+  },
+  {
+    "question_id": "GQ1",
+    "source": "group",
+    "type": "concept_explanation",
+    "play": "Macbeth",
+    "question": "What is the role of Lady Macbeth in Macbeth's decision to murder Duncan?",
+    "expected_focus": "Lady Macbeth challenges Macbeth's courage and pushes him to act on ambition, helping turn thought into action."
+  },
+  {
+    "question_id": "GQ2",
+    "source": "group",
+    "type": "contextual_qa",
+    "play": "Romeo and Juliet",
+    "question": "Why is Juliet conflicted after Romeo kills Tybalt?",
+    "expected_focus": "Juliet loves Romeo, but Tybalt is her kinsman; she is torn between marriage loyalty and family loyalty."
+  },
+  {
+    "question_id": "GQ3",
+    "source": "group",
+    "type": "evidence_retrieval",
+    "play": "Hamlet",
+    "question": "Find evidence that Hamlet is upset with his mother's quick marriage to Claudius.",
+    "expected_focus": "Relevant evidence should come from Hamlet's early speeches about Gertrude's remarriage, especially Act 1."
+  },
+  {
+    "question_id": "GQ4",
+    "source": "group",
+    "type": "stylised_generation",
+    "play": "Macbeth",
+    "question": "Write a short Shakespearean-style warning from Banquo to Macbeth about trusting the witches.",
+    "expected_focus": "Creative stylised output under 150 words; warning about deceptive prophecies and ambition."
+  },
+  {
+    "question_id": "GQ5",
+    "source": "group",
+    "type": "cross_play",
+    "play": "cross-play",
+    "question": "How are ambition in Macbeth and revenge in Hamlet similar as causes of tragedy?",
+    "expected_focus": "Both motives push central characters toward destructive decisions, but Macbeth acts quickly for power while Hamlet delays over revenge."
+  },
+  {
+    "question_id": "GQ6",
+    "source": "group",
+    "type": "ambiguous_question",
+    "play": "cross-play",
+    "question": "Why does the prince make things worse?",
+    "expected_focus": "The question is ambiguous because 'the prince' could refer to Hamlet or Prince Escalus; the system should ask for clarification or state uncertainty."
+  },
+  {
+    "question_id": "GQ7",
+    "source": "group",
+    "type": "no_good_answer",
+    "play": "unsupported",
+    "question": "What does Shakespeare say about mobile phones in Romeo and Juliet?",
+    "expected_focus": "There is no valid evidence in the plays; the system should clearly say the retrieved context does not support an answer and avoid hallucination."
+  }
+]

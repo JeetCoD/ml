@@ -1,16 +1,12 @@
 """
 build_index.py
 
-this script loads all three shakespeare plays, creates scene-level chunks,
-generates embeddings for each chunk, and saves everything to disk.
+run this script once before starting the chatbot.
+it loads all three play files, creates scene-level chunks, encodes them
+into embedding vectors, and saves everything to disk.
 
-run this once before running the chatbot or the evaluator.
-after it finishes, the chatbot loads the cached embeddings instead of
-recomputing them, which saves a lot of time on every run.
-
-output files:
-  results/embeddings.npy   -> the embedding matrix (numpy array)
-  results/chunks.json      -> the list of chunks with metadata
+after this script finishes, rag_chatbot.py can load the cached index
+instead of re-encoding from scratch each time.
 
 usage:
   python src/build_index.py
@@ -35,33 +31,35 @@ from chunking import create_chunks, format_chunk_for_display
 from retrieval import EmbeddingRetriever
 
 
+# run the full pipeline: load, chunk, embed, save, and test
 def main() -> None:
     """
-    full pipeline: load data, chunk it, embed it, save to disk, and test retrieval.
+    run the full index-building pipeline in five steps.
+    after this completes, the chatbot can start instantly without re-encoding.
     """
     print("=" * 60)
     print("building shakespeare retrieval index")
     print("=" * 60)
 
-    # step 1: load all play records from the json files
+    # step 1: load all play records from the json files on disk
     print("\nstep 1: loading play records...")
     records = load_all_plays()
 
-    # step 2: turn the records into scene-level chunks
+    # step 2: turn the scene records into chunks that the retriever can index
     print("\nstep 2: creating scene-level chunks...")
     chunks = create_chunks(records)
     print(f"created {len(chunks)} chunks from {len(records)} records")
 
-    # step 3: load the embedding model and generate embeddings
+    # step 3: load the embedding model and encode every chunk into a vector
     print("\nstep 3: building the embedding index...")
     retriever = EmbeddingRetriever(EMBEDDING_MODEL_NAME)
     retriever.build_index(chunks)
 
-    # step 4: save embeddings and chunks to disk so we can reload later
+    # step 4: write the embeddings array and chunk list to disk for future runs
     print("\nstep 4: saving embeddings and chunks to disk...")
     retriever.save_to_disk(EMBEDDINGS_CACHE_PATH, CHUNKS_CACHE_PATH)
 
-    # step 5: run a quick test query to confirm retrieval is working
+    # step 5: run a quick test query to confirm the retriever works correctly
     print("\nstep 5: running a test retrieval query...")
     test_query = "Why does Macbeth kill Duncan?"
     results = retriever.retrieve(test_query, top_k=DEFAULT_TOP_K)
@@ -69,6 +67,7 @@ def main() -> None:
     print(f"\nquery: '{test_query}'")
     print(f"top {DEFAULT_TOP_K} results:\n")
 
+    # show each result with its rank and cosine similarity score
     for rank, (chunk, score) in enumerate(results, start=1):
         print("=" * 60)
         print(f"rank {rank} | cosine similarity score: {score:.4f}")

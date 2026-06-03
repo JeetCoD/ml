@@ -1,22 +1,12 @@
 """
 baseline.py
 
-the baseline system for comparison with the rag system.
+the baseline system answers questions using only the system prompt and the
+user's question. it does not retrieve any shakespeare passages, so the model
+must rely entirely on what it already knows from training.
 
-design choice: prompt-only generation, no retrieval.
-the baseline uses the SAME language model (qwen2.5:1.5b via ollama)
-and the SAME system prompt as the rag system, but it receives NO
-retrieved shakespeare passages. it answers only from the model's
-own general knowledge.
-
-why this is a fair baseline:
-  the only difference between the baseline and the rag system is the
-  retrieved context. so any difference in answer quality between the
-  two can be attributed to retrieval, not to the underlying model.
-  this isolates the contribution of rag.
-
-usage:
-  python3 src/baseline.py
+we compare this against the rag system to show that retrieval improves
+the quality and grounding of the answers.
 """
 
 from __future__ import annotations
@@ -35,13 +25,20 @@ from config import (
 )
 
 
+# load the same system prompt the rag system uses so the two are comparable
 def load_system_prompt() -> str:
     """
-    read the same system prompt the rag system uses, so the two
-    systems differ only in whether they get retrieved context.
+    read the system prompt text file from the prompts folder.
+
+    outputs:
+      the prompt as a string, or a hardcoded fallback if the file is missing.
+
+    we use the same prompt as the rag system so the only difference between
+    baseline and rag is whether retrieved context passages are included.
     """
     prompt_path = PROMPT_DIR / "system_prompt.txt"
     if not prompt_path.exists():
+        # fallback so the baseline still works even if the prompts folder is missing
         return (
             "You are a Shakespeare-aware assistant. "
             "Answer the question in a beginner-friendly way. "
@@ -50,18 +47,28 @@ def load_system_prompt() -> str:
     return prompt_path.read_text(encoding="utf-8").strip()
 
 
+# answer a question using only the language model with no retrieved context
 def baseline_answer(query: str) -> str:
     """
-    generate an answer with no retrieval.
-    the model sees only the system prompt and the question -
-    no shakespeare passages are provided.
+    generate an answer with no retrieval - prompt only.
+
+    inputs:
+      query - the user's question as a plain string
+
+    outputs:
+      the model's answer as a string.
+
+    the model sees only the system prompt and the question. there is no
+    "retrieved context" section, which is the key difference from the rag system.
+    that absence is the whole point of the baseline because it shows us what
+    the model knows without any help from the shakespeare passages.
     """
     import ollama
 
     system_prompt = load_system_prompt()
 
-    # note: there is NO "retrieved context" section here, unlike the
-    # rag prompt. that absence is the whole point of the baseline.
+    # note: there is no "retrieved context" section here, unlike the rag prompt.
+    # that absence is intentional so we can measure how much retrieval actually helps.
     prompt = (
         f"{system_prompt}\n\n"
         f"User question: {query}\n\n"
@@ -77,6 +84,7 @@ def baseline_answer(query: str) -> str:
         },
     )
 
+    # dig into the nested response dict to get the answer text
     return response["message"]["content"].strip()
 
 
