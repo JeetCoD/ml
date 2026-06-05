@@ -1,6 +1,4 @@
 """
-rag_chatbot.py
-
 this is the main chatbot script that uses retrieval-augmented generation (rag).
 it works in three steps for every question:
 

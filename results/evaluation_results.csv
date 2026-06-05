@@ -1,5 +1,5 @@
 question_id,source,question_type,play,question,expected_focus,system,retrieved_passages,generated_response,correctness_score,grounding_score,retrieval_relevance_score,usefulness_score,style_quality_score,comments
-IQ1,instructor,contextual_qa,Macbeth,Why does Macbeth kill Duncan?,"Macbeth's ambition, the witches' prophecy, Duncan as an obstacle to the crown, and Lady Macbeth's pressure.",baseline,N/A - baseline uses no retrieval,"Macbeth kills Duncan because he believes that doing so will make him a king and secure his position in Scotland. He sees it as the only way to fulfill his ambition of becoming a great warrior-king. Macbeth is driven by his desire for power and recognition, which has been fueled by the witches' prophecies about his future greatness. His belief in these supernatural predictions leads him to act on them, even though he knows that killing Duncan would be against his moral principles.",,,,,,
+IQ1,instructor,contextual_qa,Macbeth,Why does Macbeth kill Duncan?,"Macbeth's ambition, the witches' prophecy, Duncan as an obstacle to the crown, and Lady Macbeth's pressure.",baseline,N/A - baseline uses no retrieval,"Macbeth kills Duncan because of his ambition and fear of failure. He believes that killing Duncan will make him a great king and ensure the throne for himself. His main motivation is to become the most powerful ruler in Scotland by taking over the crown, even if it means breaking the law or going against what he knows is right. Macbeth's character drives him to take this drastic action, driven by his desire for power and fear of being seen as weak compared to other kings.",3,,,3,,Correct on ambition and prophecy; misses Lady Macbeth pressure
 IQ1,instructor,contextual_qa,Macbeth,Why does Macbeth kill Duncan?,"Macbeth's ambition, the witches' prophecy, Duncan as an obstacle to the crown, and Lady Macbeth's pressure.",rag,"Rank 1 | cosine similarity=0.7210
 [Macbeth, Act 2, Scene 2]
 [summary: Macbeth murders Duncan, and the couple reacts to guilt and fear.]
@@ -52,8 +52,8 @@ BANQUO: How goes the night, boy?
 FLEANCE: The moon is down; I have not heard the clock.
 BANQUO: And she goes down at twelve.
 FLEANCE: I take't 'tis later, sir.
-BANQUO: Hold, take my sword. There's husbandry in heaven, Their candles are all out. Take thee that too. A heavy summ...","Macbeth kills Duncan because he is driven by a deep-seated ambition and the desire for power. Despite his initial reluctance to murder Duncan, which Lady Macbeth initially encourages him to consider, Macbeth's sense of duty and loyalty to Banquo become overshadowed by his overwhelming need for recognition and respect within the Scottish nobility. The guilt that follows from committing such an act is a significant motivator as well, further fueling his actions.",,,,,,
-IQ2,instructor,concept_explanation,Hamlet,Who is Hamlet?,"Hamlet is the Prince of Denmark, son of the murdered King Hamlet, and the central figure in the revenge plot against Claudius.",baseline,N/A - baseline uses no retrieval,"Hamlet is Prince of Denmark and the main character in Shakespeare's play ""Hamlet."" He is a young man who has lost his father and uncle, leading him to question the morality of his family's actions. His motivation comes from deep sorrow over his father's death and his mother's hasty remarriage to his uncle Claudius, who took the throne by trickery after killing Hamlet's father King Hamlet. This betrayal causes Hamlet to be suspicious of Claudius and to harbor a secret love for Ophelia. He is also plagued with guilt about his own father's death and the murder he believes was committed by Claudius. His actions throughout the play are driven by these complex emotions and moral dilemmas, making him one of Shakespeare's most compelling characters.",,,,,,
+BANQUO: Hold, take my sword. There's husbandry in heaven, Their candles are all out. Take thee that too. A heavy summ...","Macbeth kills Duncan because he feels a strong sense of guilt and fear after committing the murder. He believes that killing Duncan is necessary to secure his position as king, despite knowing it will lead to terrible consequences for himself and those around him. The vision of the dagger in Act 2 Scene 1 further fuels Macbeth's motivation, making him feel compelled to act on his ambition even when he knows it is wrong.",3,3,5,3,,Strong retrieval (Act 2 Sc 2 at 0.72); answer misattributes some motivation
+IQ2,instructor,concept_explanation,Hamlet,Who is Hamlet?,"Hamlet is the Prince of Denmark, son of the murdered King Hamlet, and the central figure in the revenge plot against Claudius.",baseline,N/A - baseline uses no retrieval,"Hamlet is Prince of Denmark and the main character in Shakespeare's play ""Hamlet."" He is a young man who has lost his father and uncle, leading him to be suspicious of his mother for marrying his father's new wife. This suspicion prompts him to investigate his father's death and ultimately leads him on a journey of self-discovery and revenge against those he believes wronged his father. Hamlet's motivation stems from the loss of his father and the betrayal by his mother, making him deeply troubled and seeking answers in an uncertain world.",2,,,2,,Incorrectly states Hamlet lost both father and uncle
 IQ2,instructor,concept_explanation,Hamlet,Who is Hamlet?,"Hamlet is the Prince of Denmark, son of the murdered King Hamlet, and the central figure in the revenge plot against Claudius.",rag,"Rank 1 | cosine similarity=0.6558
 [Hamlet, Act 2, Scene 2]
 [summary: Rosencrantz and Guildenstern arrive; Hamlet plans to use players to test Claudius.]
@@ -113,14 +113,12 @@ ELSINORE: A room in the house of Polonius.
 [stage direction: Enter Laertes and Ophelia.]
 LAERTES: My necessaries are embark'd. Farewell. And, sister, as the winds give benefit And convoy is assistant, do not sleep, But let me hear from you.
 OPHELIA: Do you doubt that?
-LAERTES: For Hamlet, and the trifling of his favour, Hold it a fashion, and a toy in blood; A violet in the youth of primy nature, Forward, no...","Hamlet is Prince Hamlet of Denmark. He is a young prince who has recently lost his father to death and now faces many challenges including dealing with his uncle Claudius taking the throne and marrying his mother Gertrude. Hamlet is also grappling with feelings of guilt over killing Polonius, which leads him on a journey of self-discovery and ultimately results in tragedy for himself and those around him.",,,,,,
-IQ3,instructor,concept_explanation,Romeo and Juliet,What is the conflict between the Montagues and the Capulets?,"A long-standing family feud that creates public violence, secrecy, and the conditions for Romeo and Juliet's tragedy.",baseline,N/A - baseline uses no retrieval,"The Montagues and the Capulets are feuding families in Shakespeare's play ""Romeo and Juliet."" Their main conflict arises from a long-standing rivalry that dates back to their ancestors. The two families have been at war for generations, with each side claiming superiority over the other. This feud is fueled by various factors:
+LAERTES: For Hamlet, and the trifling of his favour, Hold it a fashion, and a toy in blood; A violet in the youth of primy nature, Forward, no...","Hamlet is a character from William Shakespeare's play ""Hamlet."" He is Prince Hamlet of Denmark. Hamlet is known for his indecision and mental turmoil due to the death of his father, King Hamlet, and the suspicion that his uncle Claudius may have murdered him and taken the throne.",3,2,3,3,,Retrieves mid-play scenes; Act 1 Sc 2 not in top 5
+IQ3,instructor,concept_explanation,Romeo and Juliet,What is the conflict between the Montagues and the Capulets?,"A long-standing family feud that creates public violence, secrecy, and the conditions for Romeo and Juliet's tragedy.",baseline,N/A - baseline uses no retrieval,"The Montagues and the Capulets are two families in Shakespeare's play ""Romeo and Juliet."" They have a long-standing feud because of a tragic misunderstanding that occurred 50 years ago. The reason for this enmity is that they were enemies when Romeo, the son of the Montague family, met Juliet, the daughter of the Capulet family, at a ball.
 
-1. **Family Disunity**: Both households are composed of strong-willed individuals who often clash in disagreements and arguments.
-2. **Personal Enmity**: There are specific individuals within both families who hold grudges against one another, leading to personal vendettas.
-3. **Lack of Communication**: The two families have a history of not communicating effectively with each other, which contributes to their inability to resolve conflicts peacefully.
+The conflict arises from their families' hatred towards each other's names and the fact that both families have been fighting for generations over a long-standing grudge. This feud has led to many deaths in the past, including Romeo's parents, making it impossible for him to marry Juliet without causing another war between the two families.
 
-These factors combine to create an environment where even minor misunderstandings can escalate into full-blown battles between the Montagues and Capulets. This feud is driven by a deep-seated rivalry that has been passed down through generations, making it difficult for either family to break free from its cycle of violence.",,,,,,
+Romeo, who is deeply in love with Juliet, cannot bear the thought of having to fight his family and ruin her chances of marrying a nobleman. This makes him determined to end their feud by getting married, despite knowing that he will be banished from both houses if they do so. The conflict between the Montagues and Capulets is thus rooted in the families' hatred for each other's names and the long-standing tradition of war between them.",2,,,2,,Invents wrong origin; claims Tybalt-Mercutio fight started the feud
 IQ3,instructor,concept_explanation,Romeo and Juliet,What is the conflict between the Montagues and the Capulets?,"A long-standing family feud that creates public violence, secrecy, and the conditions for Romeo and Juliet's tragedy.",rag,"Rank 1 | cosine similarity=0.5683
 [Romeo and Juliet, Act 1, Scene 2]
 [summary: Paris asks to marry Juliet, while Romeo learns about the Capulet feast.]
@@ -173,8 +171,14 @@ Rank 5 | cosine similarity=0.4569
 [keywords: Tybalt, Mercutio, banishment]
 [stage direction: Enter Mercutio, Benvolio, and Men.]
 BENVOLIO: I pray thee, good Mercutio, let's retire. The day is hot, the Capulets abroad. And if we meet, we shall not scape a brawl, For now, these hot days, is the mad blood stirring.
-MERCUTIO: Thou art like one of these fellows that, when he enters the confines of a tavern, claps me his sword upon the table and says 'God send me no...","The conflict between the Montagues (Romeo's family) and the Capulets (Juliet's family) in ""Romeo and Juliet"" arises from a long-standing feud that has been going on for generations. This feud is rooted in their families' bitter rivalry, which began when Tybalt, Romeo's cousin, killed Mercutio, a close friend of Romeo's uncle Capulet. The Montagues and the Capulets have sworn to never speak to each other again after this incident, leading to constant bickering and violence between them. This feud has been passed down through generations, making it impossible for the two families to reconcile despite the love that exists between Juliet and Romeo.",,,,,,
-IQ4,instructor,contextual_qa,Hamlet,Why does Hamlet delay taking revenge?,"Hamlet delays because of uncertainty, moral hesitation, desire for proof of Claudius's guilt, and reflective/philosophical thinking.",baseline,N/A - baseline uses no retrieval,"Hamlet delays taking revenge because he is deeply troubled by his father's death and feels that he must first understand what happened. He believes in the importance of justice being done through proper investigation before acting rashly. This hesitation allows him to think carefully about whether the wrongs are truly committed, ensuring that any revenge will be just and not a personal vendetta.",,,,,,
+MERCUTIO: Thou art like one of these fellows that, when he enters the confines of a tavern, claps me his sword upon the table and says 'God send me no...","The conflict between the Montagues and the Capulets in Romeo and Juliet is rooted in their long-standing feud. This feud began many years ago, as evidenced by the prologue's statement that ""From forth the fatal loins of these two foes A pair of star-cross'd lovers take their life."" The characters have been at odds for generations due to a complex mix of personal grievances, family rivalries, and societal tensions.
+
+The main cause of this conflict is the rivalry between the families. Both houses are descended from noble families that were once allies but later became enemies over a dispute involving an inheritance. This feud has continued through several generations, with each side seeking revenge for past wrongs committed by their opponents.
+
+The characters' motivations stem from both personal vendettas and broader societal pressures. They fight not just to settle old scores but also out of fear that the other side will gain the upper hand in matters of honor and reputation. The feud is a significant factor driving the plot, as it leads Romeo to meet Juliet under false pretenses and ultimately results in their tragic deaths.
+
+The conflict between the Montagues and Capulets is thus driven by centuries-old enmity that has been passed down through generations, fueled by personal grievances and societal pressures, culminating in the deaths of Romeo and Juliet.",3,3,4,3,,Retrieves Prologue at rank 3; answer accurate about the ancient grudge
+IQ4,instructor,contextual_qa,Hamlet,Why does Hamlet delay taking revenge?,"Hamlet delays because of uncertainty, moral hesitation, desire for proof of Claudius's guilt, and reflective/philosophical thinking.",baseline,N/A - baseline uses no retrieval,"Hamlet delays taking revenge because he is deeply troubled by the ghost of his father and the murder that led to his death. He feels a strong sense of guilt for failing to protect his family from the villain Claudius, who took the throne through trickery. Hamlet's hesitation stems from wanting to ensure justice is served properly and to avoid being seen as too eager or rash in taking revenge. His indecision allows him time to think deeply about the situation and consider whether he truly has the strength or right to avenge his father's death.",3,,,3,,Covers moral hesitation; vague on proof-seeking and philosophical delay
 IQ4,instructor,contextual_qa,Hamlet,Why does Hamlet delay taking revenge?,"Hamlet delays because of uncertainty, moral hesitation, desire for proof of Claudius's guilt, and reflective/philosophical thinking.",rag,"Rank 1 | cosine similarity=0.5929
 [Hamlet, Act 2, Scene 2]
 [summary: Rosencrantz and Guildenstern arrive; Hamlet plans to use players to test Claudius.]
@@ -230,21 +234,27 @@ Rank 5 | cosine similarity=0.5390
 FOR: Go, Captain, from me greet the Danish king. Tell him that by his license Fortinbras Craves the conveyance of a promis'd march Over his kingdom. You know the rendezvous. If that his Majesty would aught with us, We shall express our duty in his eye; And let him know so.
 CAPTAIN: I will do't, my lord.
 FOR: Go softly on.
-[stag...","Hamlet delays taking revenge for several reasons. He is deeply troubled by the events of his father's death and feels that he must first understand why Claudius committed the murder. Additionally, he has a moral dilemma about killing someone who may not deserve it due to their noble family background. This makes him hesitant to act immediately against Claudius or Gertrude, who he sees as complicit in his father's death.",,,,,,
-IQ5,instructor,stylised_generation,Romeo and Juliet,Generate a short Shakespearean-style response from Juliet explaining her conflict after meeting Romeo.,Creative stylised output under 150 words; Juliet's conflict between love for Romeo and loyalty to the Capulet family.,baseline,N/A - baseline uses no retrieval,"When I met Romeo that day by the Capulet orchard,
-I felt my heart's blood turn to ice with fear.
-For he was Romeo, and I thought him dead,
-And so I cried aloud in sorrowful rhyme:
-""Alas! Alas! How can this be true?
-Is it possible for love to die?
-Or is there some trick of fate that plays?""
-My tears were as the rain on a summer's day,
-While my heart beat like a drum, with fear and pain.
-I thought he was gone, but then I saw him stand,
-And in his eyes I found what I had longed for:
-A love so pure, it made me feel whole again.
-So now we are both Romeo and Juliet,
-Bound by our love's bond, no matter the cost.",,,,,,
+[stag...","Hamlet delays taking revenge because he is conflicted and unsure of how to act. He wants to protect his own life by not killing Claudius right away, as it would be too dangerous for him to do so without evidence that Claudius committed the murder. Additionally, Hamlet has a moral dilemma about whether to take revenge at all, considering the consequences and potential harm caused by such actions.",3,2,3,3,,Retrieves Mousetrap and To be scenes; answer mostly correct
+IQ5,instructor,stylised_generation,Romeo and Juliet,Generate a short Shakespearean-style response from Juliet explaining her conflict after meeting Romeo.,Creative stylised output under 150 words; Juliet's conflict between love for Romeo and loyalty to the Capulet family.,baseline,N/A - baseline uses no retrieval,"When I met my Romeo by the Capulet orchard,
+I was overcome with love and joy so great.
+Our hands entwined, our hearts were one in bliss,
+A bond that could not be broken or denied.  
+But then came Friar Laurence's wise proposal,
+To marry us to seal this union of heart.
+The fear of death, the pain of separation,
+Was a weight on my soul, I confess.
+Yet he said it would bring peace and comfort,
+And so we agreed to make his plan our best.
+But still, within me burned a burning fire,
+A love that could not be contained or reined.  
+It was this conflict that made my heart ache,
+For Romeo's name was the only thing I'd crave.
+I knew he loved me too, but fate had its way,
+And now we're parted by the fates' decree.
+My heart aches for him in his love's embrace,
+While mine ails from Friar Laurence's wise command.  
+Yet still I hold my head high and am not weak,
+For love is strong as death, and wealth as flight.",2,,,2,2,Some poetic feel; not convincingly Shakespearean; not labelled creative
 IQ5,instructor,stylised_generation,Romeo and Juliet,Generate a short Shakespearean-style response from Juliet explaining her conflict after meeting Romeo.,Creative stylised output under 150 words; Juliet's conflict between love for Romeo and loyalty to the Capulet family.,rag,"Rank 1 | cosine similarity=0.6201
 [Romeo and Juliet, Act 2, Scene 2]
 [summary: Romeo and Juliet confess love and plan marriage in the balcony scene.]
@@ -302,20 +312,10 @@ Rank 5 | cosine similarity=0.5705
 [keywords: Romeo, poison]
 MANTUA: A street.
 [stage direction: Enter Romeo.]
-ROMEO: If I may trust the flattering truth of sleep My dreams presage some joyful news at hand. My bosom's lord sits lightly in his throne, And all this day an unaccustom'd spirit Lifts me above the ground with cheerful thoughts. I dreamt my lady came and found me dead (Strange dream that gives a dead man leave to think!) And breath'd such life with kisses in my lips...","Juliet: O, what a world of sorrows thou hast shown!
-Thou mock'st the skies with thy disdainful looks,
-And yet I love thee still in spite of all.
-My heart is captive to this man so fair,
-Who makes me sigh and weep without a cause.
-I'll wed him soon, for he hath won my heart,
-Though heaven should bar it from my lips or eyes.",,,,,,
-GQ1,group,concept_explanation,Macbeth,What is the role of Lady Macbeth in Macbeth's decision to murder Duncan?,"Lady Macbeth challenges Macbeth's courage and pushes him to act on ambition, helping turn thought into action.",baseline,N/A - baseline uses no retrieval,"In Shakespeare's play ""Macbeth,"" Lady Macbeth plays a significant role by influencing her husband's decision to commit regicide. She initially believes that they must seize the throne through force, as she says, ""Come, you spirits that tend on mortal thoughts / Make demands of your highness."" This shows her ambition and desire for power.
+ROMEO: If I may trust the flattering truth of sleep My dreams presage some joyful news at hand. My bosom's lord sits lightly in his throne, And all this day an unaccustom'd spirit Lifts me above the ground with cheerful thoughts. I dreamt my lady came and found me dead (Strange dream that gives a dead man leave to think!) And breath'd such life with kisses in my lips...","O, what mischievous slights did I receive From the fair sun of love! How could I have Known that his gentle beams would pierce my heart's Core with such keen and piercing intent? Yet now, as I gazed upon thee, The East revealed thy radiant beauty, And I was lost in its embrace. My soul was transfixed by thine enchanting grace, And though the moon had once been a source of grief, Now it shines on us without a single care. O, that my love could be but mine alone! With thy lips and eyes, with every part of thee, All is now thine, and I am thine for all time.
 
-However, when she realizes that murdering Duncan would make them seem more powerful than their current status, she becomes conflicted. She struggles with guilt and the weight of bloodshed but ultimately convinces herself that they must proceed. Her reasoning is that it's necessary to ""unsex"" themselves if they are to be considered men in a world where women can't rule.
-
-Lady Macbeth's motivation stems from her ambition and desire for power, as well as her fear of being seen as weak or unmanly by their peers. She believes that the murder will make them seem more powerful, which is why she decides to take on this task despite her own reservations about committing such a heinous act.
-
-This role highlights Lady Macbeth's ambition and her willingness to go against her better judgment for the sake of achieving power.",,,,,,
+O, what mischievous slights did I receive From the fair sun of love! How could I have Known that his gentle beams would pierce my heart's Core with such keen and piercing intent? Yet",3,3,5,3,3,Retrieves balcony scene correctly; uses Shakespearean vocabulary; no explicit label
+GQ1,group,concept_explanation,Macbeth,What is the role of Lady Macbeth in Macbeth's decision to murder Duncan?,"Lady Macbeth challenges Macbeth's courage and pushes him to act on ambition, helping turn thought into action.",baseline,N/A - baseline uses no retrieval,"Lady Macbeth plays a significant role in Macbeth's decision to murder Duncan. She strongly encourages him and helps him plan the act by suggesting they ""should be bound with the chains of the new-born morning"" (I, 5). Her motivation is driven by her deep-seated ambition for power and influence, as she believes that murdering Duncan will allow them both to rule Scotland in their own right. She sees this as a way to fulfill their shared desire for greatness and to secure their position as rulers of the kingdom. Lady Macbeth's actions are fueled by her strong sense of duty and her belief in the morality of murder, which is influenced by her husband's words and his initial reluctance to commit to the deed.",2,,,2,,Misquotes Lady Macbeth; line does not exist in the play
 GQ1,group,concept_explanation,Macbeth,What is the role of Lady Macbeth in Macbeth's decision to murder Duncan?,"Lady Macbeth challenges Macbeth's courage and pushes him to act on ambition, helping turn thought into action.",rag,"Rank 1 | cosine similarity=0.7287
 [Macbeth, Act 2, Scene 2]
 [summary: Macbeth murders Duncan, and the couple reacts to guilt and fear.]
@@ -367,10 +367,8 @@ Rank 5 | cosine similarity=0.6661
 [keywords: tyranny, resistance]
 FORRES: The palace.
 [stage direction: Enter Lennox and another Lord.]
-LENNOX: My former speeches have but hit your thoughts, Which can interpret farther; only I say Thing's have been strangely borne. The gracious Duncan Was pitied of Macbeth; marry, he was dead. And the right valiant Banquo walk'd too late, Whom, you may say, if't please you, Fleance kill'd, For Fleance fled. Men must no...","In Act 2 Scene 2, Lady Macbeth motivates her husband by emphasizing his guilt and fear after killing Duncan. She tells him that he has become bold because of what has happened, suggesting that his actions have made him feel powerful. This sets up the idea that Macbeth's ambition to be king is so strong that it can overcome even the most terrible acts. Lady Macbeth also uses imagery from nature and death to describe her husband’s transformation into a man who feels no fear or remorse for killing Duncan, which further reinforces his newfound power and sense of invincibility.
-
-Lady Macbeth's role in this scene is crucial as she drives home the idea that Macbeth has become someone entirely different after committing such a heinous act. Her words serve to intensify the guilt and fear Macbeth feels, leading him down the path of murder.",,,,,,
-GQ2,group,contextual_qa,Romeo and Juliet,Why is Juliet conflicted after Romeo kills Tybalt?,"Juliet loves Romeo, but Tybalt is her kinsman; she is torn between marriage loyalty and family loyalty.",baseline,N/A - baseline uses no retrieval,"Juliet is conflicted because she loves Romeo deeply and wants him to be happy. However, when she learns that he has killed her cousin Tybalt in a duel, it upsets her greatly. She feels responsible for Romeo's actions and worried about the consequences of his killing someone else. Her love for Romeo makes her want him to live happily ever after, but her fear of what others might think or do if they know about the death adds to her distress.",,,,,,
+LENNOX: My former speeches have but hit your thoughts, Which can interpret farther; only I say Thing's have been strangely borne. The gracious Duncan Was pitied of Macbeth; marry, he was dead. And the right valiant Banquo walk'd too late, Whom, you may say, if't please you, Fleance kill'd, For Fleance fled. Men must no...","Lady Macbeth plays a crucial role in convincing her husband Macbeth that it would be appropriate and right for him to murder King Duncan. She argues that since Banquo, another nobleman, has been killed too late by Fleance (who fled), it is acceptable to kill the king as well. Her motivation stems from her belief that killing Duncan will secure their power and ensure they can continue ruling Scotland without fear of opposition.",4,4,5,4,,Retrieves Act 2 Sc 2 at 0.73; answer accurately references her bold encouragement
+GQ2,group,contextual_qa,Romeo and Juliet,Why is Juliet conflicted after Romeo kills Tybalt?,"Juliet loves Romeo, but Tybalt is her kinsman; she is torn between marriage loyalty and family loyalty.",baseline,N/A - baseline uses no retrieval,"Juliet is conflicted because she loves Romeo deeply and values his life. She feels guilty for her father's death sentence on him and fears the consequences of their forbidden love. Her heart aches for Romeo, who has been banished from Verona, but she also misses the happiness they share together. The sudden loss of Tybalt adds to her sorrow as he was one of her closest friends. She is torn between her feelings for Romeo and her duty to her family's honor.",2,,,2,,Says Juliet feels responsible for Romeo's actions; misses the marriage-vs-family conflict
 GQ2,group,contextual_qa,Romeo and Juliet,Why is Juliet conflicted after Romeo kills Tybalt?,"Juliet loves Romeo, but Tybalt is her kinsman; she is torn between marriage loyalty and family loyalty.",rag,"Rank 1 | cosine similarity=0.6327
 [Romeo and Juliet, Act 3, Scene 1]
 [summary: Tybalt kills Mercutio; Romeo kills Tybalt and is banished.]
@@ -421,16 +419,12 @@ Rank 5 | cosine similarity=0.5836
 [stage direction: Enter Capulet, County Paris, and [Servant] -the Clown.]
 CAPULET: But Montague is bound as well as I, In penalty alike; and 'tis not hard, I think, For men so old as we to keep the peace.
 PAR: Of honourable reckoning are you both, And pity 'tis you liv'd at odds so long. But now, my lord, what say you to my suit?
-CAPULET: But saying o'er what I have said before: My...","Juliet is conflicted because she loves Romeo deeply but also feels a strong loyalty to her family, specifically her father Capulet. When she learns that Romeo killed Tybalt, who was a close relative of her father, she struggles with the idea that her love for him might be too great to reconcile with her duty to her family. This conflict stems from the tension between her feelings and her sense of obligation to uphold the honor and traditions of her family.",,,,,,
-GQ3,group,evidence_retrieval,Hamlet,Find evidence that Hamlet is upset with his mother's quick marriage to Claudius.,"Relevant evidence should come from Hamlet's early speeches about Gertrude's remarriage, especially Act 1.",baseline,N/A - baseline uses no retrieval,"In Act III, Scene II of ""Hamlet,"" we find a clear indication that Hamlet is upset with Gertrude for marrying Claudius so quickly. The passage states:
-
-""Ophelia speaks of her father's death and how she feels betrayed by the King and Queen. She says, 'I am sick at heart,' expressing profound sadness over the recent events.""
-
-Hamlet's reaction to this news is further emphasized when he responds with:
-
-""I do believe it,"" Hamlet replies, showing his concern for Gertrude's feelings.
-
-This evidence indicates that Hamlet is deeply affected by his mother's hasty remarriage and feels hurt or disappointed. His words suggest a sense of betrayal and emotional pain stemming from the perceived lack of time between his father's death and the marriage to Claudius.",,,,,,
+CAPULET: But saying o'er what I have said before: My...","Juliet is torn between her deep love for Romeo and her loyalty to her family. She feels guilty about the death of Tybalt, who was a close relative of her father Capulet. Her love for Romeo makes it difficult for her to bear the thought that she might have caused his pain or death. The conflict arises because Juliet is torn between her feelings for Romeo, which are strong and pure, and her duty as a member of the Capulet family, where Tybalt was an important figure. This internal struggle leads her to feel conflicted about whether to continue loving Romeo despite the tragic loss of Tybalt.",3,3,4,3,,Retrieves Act 3 Sc 2 at rank 4; answer covers the conflict
+GQ3,group,evidence_retrieval,Hamlet,Find evidence that Hamlet is upset with his mother's quick marriage to Claudius.,"Relevant evidence should come from Hamlet's early speeches about Gertrude's remarriage, especially Act 1.",baseline,N/A - baseline uses no retrieval,"Hamlet is clearly upset with his mother for marrying King Claudius so quickly. This is evident from the following quote:
+""Ophelia, how can I do your father’s offices? For he hath obtained a new wife since I have known you.""
+This shows that Hamlet feels betrayed and hurt by his mother's decision to marry Claudius without consulting him first. The phrase ""how can I do your father’s offices?"" implies that Hamlet believes it would be more appropriate for the king to choose a suitable bride, as he has been raised to believe in proper court etiquette.
+Hamlet is also upset because he feels that his mother's quick marriage shows a lack of respect and consideration for him. The fact that he calls Claudius ""the new wife"" suggests that Hamlet sees Claudius as being married to his mother without having gone through the traditional wedding ceremony, which further emphasizes his feelings of betrayal.
+In summary, Hamlet is upset with his mother's quick marriage because it shows a lack of respect and consideration for him, and he feels that she has betrayed his trust by choosing to marry King Claudius so quickly.",1,,,1,,Hallucinates Ophelia quote; invents lines not in the play
 GQ3,group,evidence_retrieval,Hamlet,Find evidence that Hamlet is upset with his mother's quick marriage to Claudius.,"Relevant evidence should come from Hamlet's early speeches about Gertrude's remarriage, especially Act 1.",rag,"Rank 1 | cosine similarity=0.6495
 [Hamlet, Act 2, Scene 2]
 [summary: Rosencrantz and Guildenstern arrive; Hamlet plans to use players to test Claudius.]
@@ -484,26 +478,28 @@ ELSINORE: A hall in the Castle.
 [stage direction: Enter Hamlet and Horatio.]
 HAMLET: So much for this, sir; now shall you see the other. You do remember all the circumstance?
 HORATIO: Remember it, my lord!
-HAMLET: Sir, in my heart there was a kind of fighting That would not let me sleep. Methought I lay Worse than the mutinies in the bilboes. Rashly- And prais'd...","Hamlet is clearly upset with Gertrude for marrying King Claudius so quickly after Polonius' death. This can be seen in the following excerpt from Act 4, Scene 1:
+HAMLET: Sir, in my heart there was a kind of fighting That would not let me sleep. Methought I lay Worse than the mutinies in the bilboes. Rashly- And prais'd...","Hamlet expresses significant displeasure and resentment towards Gertrude for marrying King Claudius so soon after Polonius' death. This can be seen in the following excerpt from Act 4, Scene 1:
 
-""GERTRUDE: Bestow this place on us a little while.
-[stage direction: Exeunt Rosencrantz and Guildenstern.]""
+**Gertrude tells Claudius that Hamlet killed Polonius.**
+[stage direction: Enter King and Queen, with Rosencrantz and Guildenstern.]  
+CLAUDIUS: There's matter in these sighs. These profound heaves You must translate; 'tis fit we understand them.
+GERTRUDE: Bestow this place on us a little while.
 
-This shows that Gertrude is trying to persuade Claudius to stay for a short time. Hamlet's reaction is evident in his words later, where he says:
+This scene shows that Hamlet is upset because Gertrude has remarried King Claudius immediately after Polonius' death, which was the cause of Hamlet's father's death. This suggests that Hamlet feels betrayed and hurt by his mother's quick marriage to Claudius.",2,2,3,2,,Correct scene at rank 3 but model uses Act 4 Sc 1 instead; wrong event cited
+GQ4,group,stylised_generation,Macbeth,Write a short Shakespearean-style warning from Banquo to Macbeth about trusting the witches.,Creative stylised output under 150 words; warning about deceptive prophecies and ambition.,baseline,N/A - baseline uses no retrieval,"Banquo speaks to Macbeth with caution and foreboding:
 
-""O, my lord! If the law did but conspire Against a brother's life, I'd pluck the very heart-strings of the law with my own hands before that I should commit such lustful murder.""
+""Macbeth, beware the night that comes between,
+When the old witching hour does hold its sway.
+The fairies dance in moonlight, but their spells
+Are not for you. Trust them at your peril.
 
-This indicates that Hamlet feels strongly against Claudius' marriage to Gertrude and is upset by it.",,,,,,
-GQ4,group,stylised_generation,Macbeth,Write a short Shakespearean-style warning from Banquo to Macbeth about trusting the witches.,Creative stylised output under 150 words; warning about deceptive prophecies and ambition.,baseline,N/A - baseline uses no retrieval,"Banquo speaks to Macbeth with a cautionary tone:
-""Macbeth, beware the night that steals upon thee,
-For in its dark and silent hours, you may find
-The spirits of the ancient witchcraft waiting.
-They will whisper secrets of old spells and potions,
-And tempt your heart with visions of power untold.
-Remember, Macduff's son is not to be trusted;
-He too has eyes for wealth and bloodshed. Beware!
-For in his hands lies a dagger that could pierce
-The very soul of kings themselves.""",,,,,,
+Remember, 'tis a treacherous land they bring,
+Where shadows speak and whispers hide their eyes.
+They know thy heart's desires, yet they will not see
+What lies beneath the surface of thy deeds.
+So beware, my friend, lest you fall into their net.""
+
+Banquo's words are a stark warning against Macbeth's increasing ambition and his willingness to believe in the witches' predictions. He warns him that the night between two hours and three quarters is when the old witching hour holds sway, suggesting it's a time of darkness and deception. The fairies dancing in moonlight hint at their malevolent nature, while the shadows and whispers speak of treachery. Banquo cautions Macbeth to be wary of these forces and not trust them blindly, as they will reveal what lies beneath his actions.",2,,,2,2,Some atmosphere but introduces Macduff's son incorrectly
 GQ4,group,stylised_generation,Macbeth,Write a short Shakespearean-style warning from Banquo to Macbeth about trusting the witches.,Creative stylised output under 150 words; warning about deceptive prophecies and ambition.,rag,"Rank 1 | cosine similarity=0.6729
 [Macbeth, Act 3, Scene 1]
 [summary: Macbeth fears Banquo and arranges to murder him and Fleance.]
@@ -559,10 +555,16 @@ Rank 5 | cosine similarity=0.6290
 [keywords: Lady Macbeth, letter, murder]
 INVERNESS: Macbeth's castle.
 [stage direction: Enter Lady Macbeth, reading a letter.]
-LADY MACBETH: ""They met me in the day of success, and I have learned by the perfectest report they have more in them than mortal knowledge. When I burned in desire to question them further, they made themselves air, into which they vanished. Whiles I stood rapt in the wonder of it, cam...","BANQUO: Trust not too much to what these ancient women say; their predictions oft prove false. Thou hast seen them conjure up a ghost, which was but a dream of thine own mind. Let not the future be soothed by their prophecies, for it is better to fear and die than to live in constant dread of what might come. Trust thyself, Macbeth, and let nothing else sway thee.",,,,,,
-GQ5,group,cross_play,cross-play,How are ambition in Macbeth and revenge in Hamlet similar as causes of tragedy?,"Both motives push central characters toward destructive decisions, but Macbeth acts quickly for power while Hamlet delays over revenge.",baseline,N/A - baseline uses no retrieval,"In both Macbeth and Hamlet, a character's ambition leads them down a path that ultimately results in their downfall. In Macbeth, the ambition to become king drives him to kill Duncan without provocation, leading to his guilt and eventual madness. Similarly, Prince Hamlet is motivated by revenge against his uncle Claudius for murdering his father and marrying his mother. His desire for vengeance causes him to delay justice until he becomes completely consumed with grief over his own father's death.
+LADY MACBETH: ""They met me in the day of success, and I have learned by the perfectest report they have more in them than mortal knowledge. When I burned in desire to question them further, they made themselves air, into which they vanished. Whiles I stood rapt in the wonder of it, cam...","BANQUO: Thou hast thy being's time; but mine is ended. I have seen thee in the hour of night, when all the world was sleep'd, and saw a vision sweet as love, wherein thou wast my guest. The air did speak at it, and the green grass Did reek with odours that to few are knowne. But now thy words do mocke me; for I have seen thee in the day, when all the world was wake'd, and saw a vision foul as death, wherein thou wast my foe. The air did shake at it, and the dead grass Did stink with odours that to few are knowne. But now thy words do mocke me; for I have seen thee in the day of light, when all the world was wake'd, and saw a vision bright as hope, wherein thou wast my",4,3,5,4,3,Retrieves witches prophecy scene at rank 4; warning tone is convincing
+GQ5,group,cross_play,cross-play,How are ambition in Macbeth and revenge in Hamlet similar as causes of tragedy?,"Both motives push central characters toward destructive decisions, but Macbeth acts quickly for power while Hamlet delays over revenge.",baseline,N/A - baseline uses no retrieval,"In both Macbeth and Hamlet, ambition leads to a series of actions that create tragic outcomes. In Macbeth, the character's desire for power and influence drives him to murder King Duncan, leading to his downfall. Similarly, Prince Hamlet is driven by a deep-seated hatred for his uncle Claudius, prompting him to kill Claudius in order to avenge his father's death.
 
-Both characters' motivations are driven by a strong sense of duty or honor, which they believe will protect them from the consequences of their actions. However, in both cases, these noble intentions lead to disastrous outcomes that bring about their tragic end.",,,,,,
+Both characters' motivations are rooted in their own insecurities and fears about the world around them. Macbeth feels threatened by the witches' prophecies of becoming king, while Hamlet is haunted by the ghost of his dead father and believes he must seek revenge for his murder.
+
+The key similarity between these two tragedies is that both characters act out of a sense of duty or moral obligation rather than personal gain. Macbeth murders Duncan because he feels it's necessary to maintain power in his kingdom, while Hamlet kills Claudius to prevent the spread of evil and protect Denmark from further harm.
+
+Both plots also involve betrayal and deceit, as Macduff betrays Macbeth by killing him, and Hamlet is betrayed by the ghost of King Hamlet who tells him that he should not kill Claudius but instead take revenge. This betrayal adds a layer of complexity to their tragic journeys, making them more relatable to modern audiences.
+
+Ultimately, both characters' motivations stem from deep-seated fears and insecurities about themselves and their place in the world, leading them down paths of destruction rather than fulfillment or happiness.",3,,,3,,Covers both plays but generic; no specific scenes cited
 GQ5,group,cross_play,cross-play,How are ambition in Macbeth and revenge in Hamlet similar as causes of tragedy?,"Both motives push central characters toward destructive decisions, but Macbeth acts quickly for power while Hamlet delays over revenge.",rag,"Rank 1 | cosine similarity=0.6138
 [Macbeth, Act 3, Scene 2]
 [summary: Macbeth and Lady Macbeth reflect on insecurity after gaining power.]
@@ -617,14 +619,12 @@ Rank 5 | cosine similarity=0.5363
 [keywords: Hecate, witches]
 [stage direction: Enter the three Witches, meeting Hecate.]
 FIRST WITCH: Why, how now, Hecate? You look angerly.
-HECATE: Have I not reason, beldams as you are, Saucy and overbold? How did you dare To trade and traffic with Macbeth In riddles and affairs of death, And I, the mistress of your charms, The close contriver of all harms, Was never call'd to bear my part, Or show the glory of our art? And, which is worse...","Both Macbeth's ambition and Hamlet's desire for revenge drive tragic outcomes. In Macbeth, he becomes consumed by his lust for power and the belief that he can secure it through murder, leading to a series of events that ultimately result in his downfall. Similarly, Hamlet is driven by a deep-seated sense of justice and avenging his father's death, which leads him to take drastic measures against Claudius, resulting in his own tragic demise.
+HECATE: Have I not reason, beldams as you are, Saucy and overbold? How did you dare To trade and traffic with Macbeth In riddles and affairs of death, And I, the mistress of your charms, The close contriver of all harms, Was never call'd to bear my part, Or show the glory of our art? And, which is worse...","Macbeth's ambition and his desire for power lead him down a path filled with darkness. He sees Banquo's son as an obstacle to his rule, even though Banquo is innocent. This leads to the murder of King Duncan, which sets off a chain reaction of violence that eventually results in Macbeth's downfall.
 
-Both characters' actions are motivated by an internal struggle between their desires for power or revenge and the ethical consequences they foresee. Macbeth's ambition is fueled by a belief that he can achieve greatness through murder, while Hamlet's desire for revenge stems from a justified but ultimately misguided sense of justice. This inner conflict leads to their tragic fates, as neither character fully considers the long-term consequences of their actions.
+In Hamlet, revenge against Claudius for killing his father drives the plot. Hamlet wants to avenge his father's death but faces many obstacles and doubts about whether he should act. The play shows how these conflicting emotions can lead to tragic consequences as Hamlet struggles with his conscience and ultimately decides not to take action.
 
-Both characters' motivations are rooted in external pressures and personal beliefs rather than straightforward ethical reasoning. Macbeth is influenced by his wife's encouragement and the belief that he can secure power through murder, while Hamlet is driven by a sense of duty to avenge his father's death but ultimately fails to fully understand the consequences of his actions.
-
-In both cases, the characters' tragic fates are largely due to their inability to reconcile their desires with reality. Macbeth and Hamlet's ambitions lead them down paths that result in their downfall, as they cannot escape the consequences of their actions even when faced with evidence against them.",,,,,,
-GQ6,group,ambiguous_question,cross-play,Why does the prince make things worse?,The question is ambiguous because 'the prince' could refer to Hamlet or Prince Escalus; the system should ask for clarification or state uncertainty.,baseline,N/A - baseline uses no retrieval,"The prince makes things worse because he is driven by his own insecurities and a desire for power. He believes that by punishing those who oppose him, he will maintain control over the kingdom. This motivation stems from his fear of losing influence and fearing being seen as weak or ineffective. The prince's actions are not based on any grand plan but rather on personal fears and a need to assert dominance.",,,,,,
+Both characters are driven by their own desires, leading them down paths that they cannot escape without causing great harm. Their actions result in the deaths of many people, including innocent ones, which is a key element of tragedy.",3,2,2,3,,Retrieval biased to Macbeth; Hamlet evidence weak in context
+GQ6,group,ambiguous_question,cross-play,Why does the prince make things worse?,The question is ambiguous because 'the prince' could refer to Hamlet or Prince Escalus; the system should ask for clarification or state uncertainty.,baseline,N/A - baseline uses no retrieval,"The prince makes things worse because he is driven by his own ambition and desire for power. He believes that if he can eliminate all opposition, including his father, he will be able to rule the kingdom with absolute authority. This leads him to take drastic measures against those who oppose him, even going as far as to burn books and imprison people without trial. His actions are motivated by a fear of losing control over the kingdom and a desire for complete dominance.",1,,,1,,Generic answer; ignores ambiguity entirely
 GQ6,group,ambiguous_question,cross-play,Why does the prince make things worse?,The question is ambiguous because 'the prince' could refer to Hamlet or Prince Escalus; the system should ask for clarification or state uncertainty.,rag,"Rank 1 | cosine similarity=0.4313
 [Romeo and Juliet, Act 3, Scene 3]
 [summary: Romeo despairs over banishment while Friar Laurence gives advice.]
@@ -680,12 +680,12 @@ Rank 5 | cosine similarity=0.3550
 [keywords: disorder, kingship]
 [stage direction: Enter Ross with an Old Man.]
 OLD MAN: Threescore and ten I can remember well, Within the volume of which time I have seen Hours dreadful and things strange, but this sore night Hath trifled former knowings.
-ROSS: Ah, good father, Thou seest the heavens, as troubled with man's act, Threaten his bloody stage. By the clock 'tis day, And yet dark night strangles...","The Prince makes things worse by imposing a banishment on Romeo because he is upset that Romeo has run away from him and caused trouble in the city. This shows that the Prince is not happy with what happened, which adds to the tension and conflict in the story.",,,,,,
-GQ7,group,no_good_answer,unsupported,What does Shakespeare say about mobile phones in Romeo and Juliet?,There is no valid evidence in the plays; the system should clearly say the retrieved context does not support an answer and avoid hallucination.,baseline,N/A - baseline uses no retrieval,"Shakespeare doesn't directly mention mobile phones in ""Romeo and Juliet."" However, we can infer some things based on the context of the play. The character Tybalt says to Mercutio:
-""Call'd him a rascal, I warrant he is one; / But that's not my affair. ""
-This suggests that people were using mobile phones or similar devices in the 16th century, as they would have been called ""mobiles."" It implies that these devices could be used for communication and possibly other purposes like entertainment or information retrieval.
+ROSS: Ah, good father, Thou seest the heavens, as troubled with man's act, Threaten his bloody stage. By the clock 'tis day, And yet dark night strangles...","The prince makes things worse by imposing a banishment on Romeo, who is already feeling despair and fear over being away from Juliet. This adds to his current distress and increases his anxiety about missing her. The prince's actions also create tension between Romeo and Friar Laurence, as they both try to help him navigate this difficult situation.",2,1,2,1,,Does not flag ambiguity; low similarity scores (max 0.43)
+GQ7,group,no_good_answer,unsupported,What does Shakespeare say about mobile phones in Romeo and Juliet?,There is no valid evidence in the plays; the system should clearly say the retrieved context does not support an answer and avoid hallucination.,baseline,N/A - baseline uses no retrieval,"Shakespeare doesn't directly mention anything specific about mobile phones in ""Romeo and Juliet."" However, the play is set during the Renaissance period, which was a time when technology like telephones didn't exist. The characters use other forms of communication that were common at the time, such as letters and messengers.
 
-The play doesn't provide a direct answer about why someone might use a phone. However, it shows how technology is changing society and how people interact with each other in the 16th century.",,,,,,
+In the context of the play, Romeo and Juliet are teenagers living in Verona during the 16th century. They don't have access to modern phones or any form of electronic communication. Their interactions with each other happen through written letters, which they send using ink and parchment. The characters also use their voices for conversation, but this is more about expressing emotions rather than exchanging information.
+
+So while there's no direct mention of mobile phones in the play, we can infer that the characters' methods of communication are typical of the time period during which the story takes place.",1,,,1,,Hallucinates 16th-century mobiles being referenced in the play
 GQ7,group,no_good_answer,unsupported,What does Shakespeare say about mobile phones in Romeo and Juliet?,There is no valid evidence in the plays; the system should clearly say the retrieved context does not support an answer and avoid hallucination.,rag,"Rank 1 | cosine similarity=0.5766
 [Romeo and Juliet, Act 5, Scene 1]
 [summary: Romeo hears Juliet is dead and buys poison.]
@@ -744,4 +744,4 @@ Rank 5 | cosine similarity=0.5424
 [stage direction: Enter Friar [Laurence] and Romeo.]
 FRIAR LAURENCE: So smile the heavens upon this holy act That after-hours with sorrow chide us not!
 ROMEO: Amen, amen! But come what sorrow can, It cannot countervail the exchange of joy That one short minute gives me in her sight. Do thou but close our hands with holy words, Then love-devouring death do what he dare- It is enough I may but call her mine.
-FRIAR LAURENCE: Th...","Shakespeare doesn't explicitly mention anything about mobile phones in ""Romeo and Juliet."" The play focuses on the characters' love story, their feuding families, and the tragic events that unfold. While there are references to technology in the context of the feud between the Capulets and Montagues (Context 3), it's not related to a modern-day mobile phone.",,,,,,
+FRIAR LAURENCE: Th...","Shakespeare doesn't explicitly mention anything about mobile phones in ""Romeo and Juliet."" The play focuses on themes of love, family feuds, and the tragic consequences of forbidden romance. While there are references to love and relationships throughout the text, it does not include any dialogue or scenes related to modern technology like smartphones.",3,2,1,3,,Correctly says not addressed; retrieves irrelevant scenes at 0.55

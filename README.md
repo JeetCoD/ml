@@ -252,4 +252,11 @@ This is normal on CPU. Encoding all scene chunks takes 1 to 2 minutes the first 
 
 ---
 
+# Demo question for presentation
+1. Who is Hamlet?
+2. Why does Macbeth kill Duncan?
+3. What is the conflict between the Montagues and the Capulets?
+4. stylised: Write a response from Juliet about her love for Romeo
+
+
 Built for CSCI433/933 Machine Learning Algorithms and Applications, Assignment 2, University of Wollongong.
