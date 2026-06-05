@@ -24,10 +24,6 @@ import json
 from pathlib import Path
 from typing import Any, Dict, List, Tuple
 
-# sentence_transformers must be imported before numpy/sklearn to avoid a
-# windows dll conflict: tensorflow (loaded by sentence_transformers) and
-# numpy's openblas both register incompatible blas symbols. loading tf first
-# prevents the access-violation crash (exit 0xc0000005) on windows.
 try:
     from sentence_transformers import SentenceTransformer
 except ImportError as _st_error:
